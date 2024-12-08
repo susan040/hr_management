@@ -9,4 +9,5 @@ class ImagePath {
   static const String history = "$baseIconPath/history.svg";
 
   static const String logo = "$baseImagePath/logo.png";
+  static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
 }

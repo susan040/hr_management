@@ -7,7 +7,9 @@ class AppColors {
 
   static const Color lGrey = Color(0xFFDBDADA);
   static const Color textColor = Color(0xFF000000);
-  static const Color secondaryTextColor = Color(0xFFAAAAAA);
+  static const Color secondaryTextColor = Color(0xFF848484);
+  static const Color redColor = Color(0xFFC03F42);
+
   static const Color errorColor = Color(0xFFCE1919);
   static Color shadowColor = Colors.black.withOpacity(0.1);
 

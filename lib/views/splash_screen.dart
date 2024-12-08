@@ -1,28 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hr_management/controller/splash_screen_controller.dart';
+import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/image_path.dart';
-import 'package:hr_management/widgets/custom/custom_textfield.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+  final c = Get.put(SplashScreenController());
+  SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+        backgroundColor: AppColors.extraWhite,
+        body: Center(
           child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: CustomTextField(
-                preIconPath: ImagePath.email,
-                iconHeight: 20,
-                iconWidth: 20,
-                hint: "Hello",
-                textInputAction: TextInputAction.next,
-                textInputType: TextInputType.text),
-          )
-        ],
-      )),
-    );
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                ImagePath.logo,
+                height: 188,
+                width: 188,
+              ),
+              const SizedBox(height: 75),
+              const CircularProgressIndicator(
+                backgroundColor: AppColors.secondaryColor,
+                valueColor: AlwaysStoppedAnimation(AppColors.primaryColor),
+              ),
+              const SizedBox(height: 75),
+            ],
+          ),
+        ));
   }
 }

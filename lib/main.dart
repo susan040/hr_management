@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'HRM',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        useMaterial3: false,
+        useMaterial3: true,
       ),
       home: SplashScreen(),
     );
