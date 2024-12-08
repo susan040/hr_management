@@ -9,30 +9,38 @@ class CustomPasswordField extends StatelessWidget {
   final String hint;
   final FocusNode? focusNode;
   final bool eye;
+  final String? preIconPath;
+  final Color? border;
   final VoidCallback onEyeClick;
   final TextEditingController controller;
   final TextInputAction textInputAction;
   final String? Function(String?)? validator;
   final Function(String)? onSubmitted;
   final String? labelText;
+  final double? iconHeight;
+  final double? iconWidth;
 
-  const CustomPasswordField({
-    Key? key,
-    required this.hint,
-    required this.eye,
-    required this.onEyeClick,
-    required this.controller,
-    required this.textInputAction,
-    this.validator,
-    this.onSubmitted,
-    this.focusNode,
-    this.labelText,
-  }) : super(key: key);
+  const CustomPasswordField(
+      {Key? key,
+      required this.hint,
+      this.preIconPath,
+      required this.eye,
+      required this.onEyeClick,
+      required this.controller,
+      required this.textInputAction,
+      this.validator,
+      this.onSubmitted,
+      this.focusNode,
+      this.border,
+      this.labelText,
+      this.iconHeight,
+      this.iconWidth})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 5),
+      height: 50,
       child: TextFormField(
         focusNode: focusNode,
         onFieldSubmitted: onSubmitted,
@@ -42,6 +50,30 @@ class CustomPasswordField extends StatelessWidget {
         maxLines: 1,
         textInputAction: textInputAction,
         decoration: InputDecoration(
+          prefixIcon: preIconPath != null
+              ? Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SvgPicture.asset(
+                        preIconPath!,
+                        fit: BoxFit.contain,
+                        height: iconHeight,
+                        width: iconWidth,
+                        color: AppColors.primaryColor,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 14),
+                        height: 63,
+                        width: 1,
+                        decoration:
+                            BoxDecoration(color: AppColors.secondaryColor),
+                      )
+                    ],
+                  ),
+                )
+              : null,
           label: labelText != null
               ? Text(
                   labelText ?? "",
@@ -50,44 +82,49 @@ class CustomPasswordField extends StatelessWidget {
                   ),
                 )
               : null,
-          enabledBorder: const OutlineInputBorder(
-            borderSide:
-                BorderSide(width: 1, color: AppColors.secondaryTextColor),
-          ),
-          focusedErrorBorder: const OutlineInputBorder(
-            borderSide: BorderSide(width: 1, color: AppColors.errorColor),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(width: 1, color: AppColors.primaryColor),
-          ),
-          errorBorder: const OutlineInputBorder(
-            borderSide: BorderSide(width: 1, color: AppColors.errorColor),
-          ),
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  width: 1, color: border ?? AppColors.secondaryColor),
+              borderRadius: BorderRadius.circular(6)),
+          focusedErrorBorder: UnderlineInputBorder(
+              borderSide:
+                  BorderSide(width: 1, color: border ?? AppColors.errorColor),
+              borderRadius: BorderRadius.circular(6)),
+          focusedBorder: OutlineInputBorder(
+              borderSide:
+                  BorderSide(width: 1, color: border ?? AppColors.primaryColor),
+              borderRadius: BorderRadius.circular(6)),
+          errorBorder: OutlineInputBorder(
+              borderSide:
+                  BorderSide(width: 1, color: border ?? AppColors.errorColor),
+              borderRadius: BorderRadius.circular(6)),
           suffixIcon: IconButton(
             onPressed: onEyeClick,
             icon: (eye)
                 ? SvgPicture.asset(
                     ImagePath.eyeOff,
-                    height: 16,
-                    colorFilter: const ColorFilter.mode(
-                        AppColors.backGroundDark, BlendMode.srcIn),
-                    fit: BoxFit.scaleDown,
-                  )
-                : SvgPicture.asset(
-                    ImagePath.eye,
-                    height: 12,
+                    height: 19,
+                    width: 19,
                     colorFilter: ColorFilter.mode(
                         AppColors.backGroundDark.withOpacity(0.5),
                         BlendMode.srcIn),
-                    fit: BoxFit.scaleDown,
+                    fit: BoxFit.fill,
+                  )
+                : SvgPicture.asset(
+                    ImagePath.eye,
+                    height: 14,
+                    colorFilter: ColorFilter.mode(
+                        AppColors.backGroundDark.withOpacity(0.5),
+                        BlendMode.srcIn),
+                    fit: BoxFit.fill,
                   ),
           ),
           errorStyle: const TextStyle(fontSize: 10),
           hintText: hint,
           hintStyle:
-              CustomTextStyles.f16W400(color: AppColors.secondaryTextColor),
+              CustomTextStyles.f14W400(color: AppColors.secondaryTextColor),
         ),
-        style: CustomTextStyles.f16W400(),
+        style: CustomTextStyles.f14W400(),
       ),
     );
   }

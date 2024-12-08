@@ -4,6 +4,7 @@ import 'package:hr_management/controller/privacy_policy_controller.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/auth/login_screen.dart';
 import 'package:hr_management/widgets/custom/elevated_button.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
@@ -13,6 +14,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         title: Text(
           "Privacy Policy",
@@ -109,19 +111,25 @@ class PrivacyPolicyScreen extends StatelessWidget {
                     SizedBox(
                         width: Get.width / 3.2,
                         height: 38,
-                        child:
-                            CustomElevatedButton(title: "Login", onTap: () {})),
-                    Container(
-                      width: Get.width / 3.2,
-                      height: 38,
-                      decoration: BoxDecoration(
-                          color: AppColors.redColor,
-                          borderRadius: BorderRadius.circular(6)),
-                      child: Center(
-                        child: Text(
-                          "Register",
-                          style: CustomTextStyles.f14W600(
-                              color: AppColors.extraWhite),
+                        child: CustomElevatedButton(
+                            title: "Login",
+                            onTap: () {
+                              Get.offAll(() => LoginScreen());
+                            })),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: Get.width / 3.2,
+                        height: 38,
+                        decoration: BoxDecoration(
+                            color: AppColors.redColor,
+                            borderRadius: BorderRadius.circular(6)),
+                        child: Center(
+                          child: Text(
+                            "Register",
+                            style: CustomTextStyles.f14W600(
+                                color: AppColors.extraWhite),
+                          ),
                         ),
                       ),
                     ),
