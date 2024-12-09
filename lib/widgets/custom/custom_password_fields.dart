@@ -103,8 +103,8 @@ class CustomPasswordField extends StatelessWidget {
             icon: (eye)
                 ? SvgPicture.asset(
                     ImagePath.eyeOff,
-                    height: 19,
-                    width: 19,
+                    height: 18,
+                    width: 18,
                     colorFilter: ColorFilter.mode(
                         AppColors.backGroundDark.withOpacity(0.5),
                         BlendMode.srcIn),
@@ -112,7 +112,7 @@ class CustomPasswordField extends StatelessWidget {
                   )
                 : SvgPicture.asset(
                     ImagePath.eye,
-                    height: 14,
+                    height: 13,
                     colorFilter: ColorFilter.mode(
                         AppColors.backGroundDark.withOpacity(0.5),
                         BlendMode.srcIn),
