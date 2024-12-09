@@ -5,6 +5,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/utils/validatior.dart';
+import 'package:hr_management/views/auth/all_done_screen.dart';
 import 'package:hr_management/views/auth/register_screen.dart';
 import 'package:hr_management/widgets/custom/custom_password_fields.dart';
 import 'package:hr_management/widgets/custom/custom_textfield.dart';
@@ -71,7 +72,11 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 25),
-                      CustomElevatedButton(title: "Login", onTap: () {}),
+                      CustomElevatedButton(
+                          title: "Login",
+                          onTap: () {
+                            Get.offAll(() => AllDoneScreen());
+                          }),
                       SizedBox(height: 15),
                       Text(
                         "or",

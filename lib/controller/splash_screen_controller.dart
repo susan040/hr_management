@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:hr_management/views/privacy_policy_screen.dart';
+import 'package:hr_management/views/auth/privacy_policy_screen.dart';
 
 class SplashScreenController extends GetxController {
   @override

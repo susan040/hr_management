@@ -13,4 +13,5 @@ class ImagePath {
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
   static const String google = "$baseImagePath/google.png";
+  static const String allDone = "$baseImagePath/all_done.png";
 }

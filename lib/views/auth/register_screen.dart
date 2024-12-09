@@ -5,6 +5,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/utils/validatior.dart';
+import 'package:hr_management/views/auth/all_done_screen.dart';
 import 'package:hr_management/views/auth/login_screen.dart';
 import 'package:hr_management/widgets/custom/custom_password_fields.dart';
 import 'package:hr_management/widgets/custom/custom_textfield.dart';
@@ -95,7 +96,11 @@ class RegisterScreen extends StatelessWidget {
                           controller: c.confirmPasswordController,
                           textInputAction: TextInputAction.done)),
                       SizedBox(height: 27),
-                      CustomElevatedButton(title: "Sign Up", onTap: () {}),
+                      CustomElevatedButton(
+                          title: "Sign Up",
+                          onTap: () {
+                            Get.offAll(() => AllDoneScreen());
+                          }),
                       SizedBox(height: 12),
                       Text("or", style: CustomTextStyles.f14W400()),
                       SizedBox(height: 12),
