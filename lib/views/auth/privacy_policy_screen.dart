@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hr_management/controller/privacy_policy_controller.dart';
+import 'package:hr_management/controller/auth/privacy_policy_controller.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';

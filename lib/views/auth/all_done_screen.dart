@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/dash_screen.dart';
 import 'package:hr_management/widgets/custom/elevated_button.dart';
 
 class AllDoneScreen extends StatelessWidget {
@@ -33,7 +35,10 @@ class AllDoneScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 85),
                 CustomElevatedButton(
-                    title: "Start exploring the app", onTap: () {})
+                    title: "Start exploring the app",
+                    onTap: () {
+                      Get.offAll(() => DashScreen());
+                    })
               ],
             ),
           ),

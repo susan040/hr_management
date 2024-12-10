@@ -4,6 +4,9 @@ class ImagePath {
 
   static const String eye = "$baseIconPath/eye.svg";
   static const String eyeOff = "$baseIconPath/eye_off.svg";
+  static const String home = "$baseIconPath/home.svg";
+  static const String setting = "$baseIconPath/setting.svg";
+  static const String history = "$baseIconPath/history.svg";
   static const String email = "$baseIconPath/email.svg";
   static const String password = "$baseIconPath/password.svg";
   static const String person = "$baseIconPath/person.svg";

@@ -1,39 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import '../../utils/colors.dart';
 
 class CustomBottomNavIcon extends StatelessWidget {
-  final IconData icon;
+  final String svgPath;
   final String title;
   final bool isActive;
+  final double height;
+  final double width;
   final VoidCallback onTap;
+
   const CustomBottomNavIcon({
     super.key,
     required this.title,
     required this.isActive,
     required this.onTap,
-    required this.icon,
+    required this.svgPath,
+    required this.height,
+    required this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: onTap,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon,
-              size: 30,
-              color: isActive ? AppColors.backGroundColor : Colors.grey,
+      onTap: onTap,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 14),
+            height: 45,
+            width: isActive ? 115 : 50,
+            decoration: BoxDecoration(
+              color: isActive ? AppColors.primaryColor : Colors.transparent,
+              borderRadius: BorderRadius.circular(25),
             ),
-            Text(
-              title,
-              style: CustomTextStyles.f14W400(
-                color: isActive ? AppColors.backGroundColor : Colors.grey,
-              ),
-            )
-          ],
-        ));
+            child: Row(
+              children: [
+                SvgPicture.asset(
+                  height: height,
+                  width: height,
+                  svgPath,
+                  color: isActive ? AppColors.backGroundColor : Colors.grey,
+                ),
+                if (isActive) ...[
+                  const SizedBox(width: 8),
+                  Text(
+                    title,
+                    style: CustomTextStyles.f14W600(
+                      color: AppColors.backGroundColor,
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
