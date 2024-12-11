@@ -5,6 +5,7 @@ import 'package:hr_management/controller/dashboard/home_screen_controller.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/widgets/events_widgets.dart';
 
 class TabBarWidget extends StatelessWidget {
   const TabBarWidget({
@@ -91,8 +92,8 @@ class TabBarWidget extends StatelessWidget {
                   SizedBox(height: 14)
                 ],
               ),
-              Center(child: Text("Content for Tab 2")),
-              Center(child: Text("Content for Tab 3")),
+              EventsWidgets(),
+              HolidaysWidget()
             ],
           );
         }),

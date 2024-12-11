@@ -214,9 +214,14 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Services", style: CustomTextStyles.f16W600()),
-                    Text("View All",
-                        style: CustomTextStyles.f14W400(
-                            color: AppColors.primaryColor)),
+                    InkWell(
+                      onTap: (){
+                        
+                      },
+                      child: Text("View All",
+                          style: CustomTextStyles.f14W400(
+                              color: AppColors.primaryColor)),
+                    ),
                   ],
                 ),
               ),
