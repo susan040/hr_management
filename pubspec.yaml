@@ -38,6 +38,8 @@ dependencies:
   get: ^4.6.6
   flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.16
+  permission_handler: ^11.3.1
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:
@@ -90,10 +92,9 @@ flutter:
           weight: 400
         - asset: assets/fonts/Poppins-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Poppins-SemiBold.ttf
-          weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -9,6 +9,16 @@ class AppColors {
   static const Color textColor = Color(0xFF000000);
   static const Color secondaryTextColor = Color(0xFF848484);
   static const Color redColor = Color(0xFFC03F42);
+  static const Color blue = Color(0xFF407BFF);
+  static const Color purple = Color(0xFF8A017A);
+
+  static const Color yellow = Color(0xFFF38D0E);
+
+  static const Color lightGreen = Color(0xFF23B480);
+  static const Color darkblue = Color(0xFF5D70BC);
+  static const Color darkRed = Color(0xFFC03F42);
+  static const Color lightPink = Color(0xFFF3E5EB);
+  static const Color lightBlue = Color(0xFFD1D7EE);
 
   static const Color errorColor = Color(0xFFCE1919);
   static Color shadowColor = Colors.black.withOpacity(0.1);
@@ -31,8 +41,6 @@ class AppColors {
 
   static const accepted = Color.fromRGBO(0, 167, 67, 1);
   static const rejected = Color.fromRGBO(255, 59, 59, 1);
-
-  static Color lightBlue = const Color(0xFFE5FCFF);
 
   static final shimmerBase = Colors.grey.withOpacity(0.20);
   static const Color shimmerHighlight = Color(0xFFE1E1E1);
