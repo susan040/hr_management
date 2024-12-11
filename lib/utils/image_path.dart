@@ -24,6 +24,9 @@ class ImagePath {
   static const String meetings = "$baseIconPath/meeting.svg";
   static const String events = "$baseIconPath/events.svg";
   static const String holiday = "$baseIconPath/holiday.svg";
+  static const String cash = "$baseIconPath/cash.svg";
+  static const String expense = "$baseIconPath/expense.svg";
+  static const String travel = "$baseIconPath/travel.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
