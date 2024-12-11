@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 class RegisterScreenController extends GetxController {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  RxBool passwordObscure = false.obs;
-  RxBool confirmObscure = false.obs;
+  RxBool passwordObscure = true.obs;
+  RxBool confirmObscure = true.obs;
   final fullNameController = TextEditingController();
   final emailController = TextEditingController();
   final addressController = TextEditingController();
