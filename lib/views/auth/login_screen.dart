@@ -7,6 +7,7 @@ import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/utils/validatior.dart';
 import 'package:hr_management/views/auth/all_done_screen.dart';
 import 'package:hr_management/views/auth/register_screen.dart';
+import 'package:hr_management/views/forgot_password/forgot_password_screen.dart';
 import 'package:hr_management/widgets/custom/custom_password_fields.dart';
 import 'package:hr_management/widgets/custom/custom_textfield.dart';
 import 'package:hr_management/widgets/custom/elevated_button.dart';
@@ -67,8 +68,13 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text("Forgot Password?",
-                              style: CustomTextStyles.f12W400()),
+                          InkWell(
+                            onTap: () {
+                              Get.to(() => ForgotPasswordScreen());
+                            },
+                            child: Text("Forgot Password?",
+                                style: CustomTextStyles.f12W400()),
+                          ),
                         ],
                       ),
                       SizedBox(height: 25),

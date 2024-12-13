@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                     EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 16),
                 padding:
                     EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 14),
-                height: 129,
+                height: 134,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: AppColors.extraWhite,

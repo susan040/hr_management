@@ -33,4 +33,8 @@ class ImagePath {
   static const String google = "$baseImagePath/google.png";
   static const String allDone = "$baseImagePath/all_done.png";
   static const String blankProfile = "$baseImagePath/blank_profile.jpg";
+  static const String changePassword = "$baseImagePath/change_password.png";
+  static const String emailVerification =
+      "$baseImagePath/email_verification.png";
+  static const String forgotPassword = "$baseImagePath/forgot_password.png";
 }
