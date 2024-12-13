@@ -6,6 +6,8 @@ class HomeScreenController extends GetxController
     with SingleGetTickerProviderMixin {
   late TabController tabController;
   var selectedIndex = 0.obs;
+  var moreDetailOpen1 = false.obs;
+  var moreDetailOpen2 = false.obs;
 
   @override
   void onInit() {
@@ -25,5 +27,13 @@ class HomeScreenController extends GetxController
   void onClose() {
     tabController.dispose();
     super.onClose();
+  }
+
+  void toggleMoreDetails1() {
+    moreDetailOpen1.value = !moreDetailOpen1.value;
+  }
+
+  void toggleMoreDetails2() {
+    moreDetailOpen2.value = !moreDetailOpen2.value;
   }
 }
