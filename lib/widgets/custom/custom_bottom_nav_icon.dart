@@ -30,8 +30,8 @@ class CustomBottomNavIcon extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.only(left: 14),
-            height: 45,
-            width: isActive ? 115 : 50,
+            height: 42,
+            width: isActive ? 105 : 60,
             decoration: BoxDecoration(
               color: isActive ? AppColors.primaryColor : Colors.transparent,
               borderRadius: BorderRadius.circular(25),
@@ -48,7 +48,7 @@ class CustomBottomNavIcon extends StatelessWidget {
                   const SizedBox(width: 8),
                   Text(
                     title,
-                    style: CustomTextStyles.f14W600(
+                    style: CustomTextStyles.f12W600(
                       color: AppColors.backGroundColor,
                     ),
                   ),

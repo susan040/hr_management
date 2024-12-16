@@ -27,8 +27,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 16, top: 14, bottom: 8),
+                    padding: const EdgeInsets.only(left: 16, top: 5, bottom: 8),
                     child: Row(children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(12),
@@ -97,9 +96,9 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 margin:
-                    EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 16),
+                    EdgeInsets.only(left: 16, right: 16, top: 9, bottom: 18),
                 padding:
-                    EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 14),
+                    EdgeInsets.only(left: 18, right: 16, top: 14, bottom: 14),
                 height: 134,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -120,9 +119,9 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           "Content Manager",
-                          style: CustomTextStyles.f16W600(),
+                          style: CustomTextStyles.f14W600(),
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 6),
                         Row(
                           children: [
                             Container(
@@ -137,23 +136,23 @@ class HomeScreen extends StatelessWidget {
                             SizedBox(width: 10),
                             Text(
                               "11 November | 2024",
-                              style: CustomTextStyles.f14W400(
+                              style: CustomTextStyles.f12W400(
                                   color: AppColors.secondaryTextColor),
                             ),
                           ],
                         ),
-                        SizedBox(height: 6),
+                        SizedBox(height: 10),
                         Row(
                           children: [
                             Text(
                               "01:26:31",
-                              style: CustomTextStyles.f14W400(
+                              style: CustomTextStyles.f12W400(
                                   color: AppColors.rejected),
                             ),
-                            SizedBox(width: Get.width / 4.8),
+                            SizedBox(width: Get.width / 4.4),
                             Text(
                               "Time Remaining",
-                              style: CustomTextStyles.f14W400(),
+                              style: CustomTextStyles.f12W400(),
                             ),
                           ],
                         ),
@@ -168,13 +167,13 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Text(
                               "00:00",
-                              style: CustomTextStyles.f14W400(
+                              style: CustomTextStyles.f12W400(
                                   color: AppColors.secondaryTextColor),
                             ),
-                            SizedBox(width: Get.width / 3),
+                            SizedBox(width: Get.width / 2.9),
                             Text(
                               "Check Out",
-                              style: CustomTextStyles.f14W400(
+                              style: CustomTextStyles.f12W400(
                                   color: AppColors.secondaryTextColor),
                             ),
                           ],
@@ -184,7 +183,7 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: 6, bottom: 10),
+                          margin: EdgeInsets.only(top: 6, bottom: 10, right: 5),
                           height: 58,
                           width: 58,
                           decoration: BoxDecoration(
@@ -197,7 +196,7 @@ class HomeScreen extends StatelessWidget {
                           onTap: () {},
                           child: Text(
                             "Check In",
-                            style: CustomTextStyles.f14W600(
+                            style: CustomTextStyles.f12W600(
                                 color: AppColors.primaryColor),
                           ),
                         )
@@ -214,13 +213,13 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Services", style: CustomTextStyles.f16W600()),
+                    Text("Services", style: CustomTextStyles.f14W600()),
                     InkWell(
                       onTap: () {
                         Get.to(() => AllServicesScreen());
                       },
                       child: Text("View All",
-                          style: CustomTextStyles.f14W400(
+                          style: CustomTextStyles.f12W400(
                               color: AppColors.primaryColor)),
                     ),
                   ],
@@ -232,20 +231,26 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ServicesWidget(
-                        iconContainerColor: AppColors.blue,
-                        iconPath: ImagePath.attendanceManagement,
-                        title: "Attendance",
-                        subtitle: "Management"),
+                      iconContainerColor: AppColors.blue,
+                      iconPath: ImagePath.attendanceManagement,
+                      title: "Attendance",
+                      subtitle: "Management",
+                      onTap: () {},
+                    ),
                     ServicesWidget(
-                        iconContainerColor: AppColors.purple,
-                        iconPath: ImagePath.appeal,
-                        title: "Attendance",
-                        subtitle: "Appeal"),
+                      iconContainerColor: AppColors.purple,
+                      iconPath: ImagePath.appeal,
+                      title: "Attendance",
+                      subtitle: "Appeal",
+                      onTap: () {},
+                    ),
                     ServicesWidget(
-                        iconContainerColor: AppColors.yellow,
-                        iconPath: ImagePath.leaveApplication,
-                        title: "Leave",
-                        subtitle: "Application"),
+                      iconContainerColor: AppColors.yellow,
+                      iconPath: ImagePath.leaveApplication,
+                      title: "Leave",
+                      subtitle: "Application",
+                      onTap: () {},
+                    ),
                   ],
                 ),
               ),
@@ -256,20 +261,26 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ServicesWidget(
-                        iconContainerColor: AppColors.lightGreen,
-                        iconPath: ImagePath.paySlip,
-                        title: "Pay Slip",
-                        subtitle: "Management"),
+                      iconContainerColor: AppColors.lightGreen,
+                      iconPath: ImagePath.paySlip,
+                      title: "Pay Slip",
+                      subtitle: "Management",
+                      onTap: () {},
+                    ),
                     ServicesWidget(
-                        iconContainerColor: AppColors.darkblue,
-                        iconPath: ImagePath.grievance,
-                        title: "Grievance",
-                        subtitle: "Redressal"),
+                      iconContainerColor: AppColors.darkblue,
+                      iconPath: ImagePath.grievance,
+                      title: "Grievance",
+                      subtitle: "Redressal",
+                      onTap: () {},
+                    ),
                     ServicesWidget(
-                        iconContainerColor: AppColors.darkRed,
-                        iconPath: ImagePath.shift,
-                        title: "Shift",
-                        subtitle: "Swapping"),
+                      iconContainerColor: AppColors.darkRed,
+                      iconPath: ImagePath.shift,
+                      title: "Shift",
+                      subtitle: "Swapping",
+                      onTap: () {},
+                    ),
                   ],
                 ),
               ),

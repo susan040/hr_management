@@ -16,13 +16,13 @@ class DashScreen extends StatelessWidget {
       body: Obx(() => c.pages[c.currentIndex.value]),
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(left: 16, right: 16),
-        height: 70,
+        height: 65,
         decoration: BoxDecoration(
           color: AppColors.extraWhite,
           boxShadow: [
             BoxShadow(
                 blurRadius: 5,
-                spreadRadius: 3 ,
+                spreadRadius: 3,
                 color: AppColors.lGrey,
                 offset: Offset(3, 2))
           ],
@@ -34,8 +34,8 @@ class DashScreen extends StatelessWidget {
               () => CustomBottomNavIcon(
                 title: "Home",
                 svgPath: ImagePath.home,
-                height: 21,
-                width: 21,
+                height: 18,
+                width: 18,
                 isActive: c.currentIndex.value == 0,
                 onTap: () {
                   c.currentIndex.value = 0;
@@ -46,8 +46,8 @@ class DashScreen extends StatelessWidget {
               () => CustomBottomNavIcon(
                 title: "History",
                 svgPath: ImagePath.history,
-                height: 20,
-                width: 20,
+                height: 18,
+                width: 18,
                 isActive: c.currentIndex.value == 1,
                 onTap: () {
                   c.currentIndex.value = 1;
@@ -58,8 +58,8 @@ class DashScreen extends StatelessWidget {
               () => CustomBottomNavIcon(
                 title: "Setting",
                 svgPath: ImagePath.setting,
-                height: 20,
-                width: 20,
+                height: 18,
+                width: 18,
                 isActive: c.currentIndex.value == 2,
                 onTap: () {
                   c.currentIndex.value = 2;

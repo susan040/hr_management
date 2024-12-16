@@ -43,7 +43,7 @@ class ServicesWidget extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.only(right: 7),
+            margin: EdgeInsets.only(right: 8),
             height: 105,
             width: 9,
             decoration: BoxDecoration(
@@ -58,7 +58,7 @@ class ServicesWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 11),
+                margin: EdgeInsets.only(top: 12),
                 height: 43,
                 width: 43,
                 decoration: BoxDecoration(
@@ -71,14 +71,14 @@ class ServicesWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 6),
+              SizedBox(height: 7),
               Text(
                 title,
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f11W400(),
               ),
               Text(
                 subtitle,
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f11W400(),
               ),
             ],
           ),
