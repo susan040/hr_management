@@ -27,7 +27,8 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 16, top: 5, bottom: 8),
+                    padding:
+                        const EdgeInsets.only(left: 16, top: 12, bottom: 8),
                     child: Row(children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(12),
@@ -96,7 +97,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 margin:
-                    EdgeInsets.only(left: 16, right: 16, top: 9, bottom: 18),
+                    EdgeInsets.only(left: 16, right: 16, top: 9, bottom: 14),
                 padding:
                     EdgeInsets.only(left: 18, right: 16, top: 14, bottom: 14),
                 height: 134,
@@ -106,8 +107,8 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                          spreadRadius: 1,
-                          blurRadius: 3,
+                          spreadRadius: 3,
+                          blurRadius: 4,
                           color: AppColors.lGrey,
                           offset: Offset(2, 2))
                     ]),
@@ -256,7 +257,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                    left: 16, top: 14, right: 16, bottom: 12),
+                    left: 16, top: 14, right: 16, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

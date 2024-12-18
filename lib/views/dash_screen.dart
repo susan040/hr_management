@@ -21,8 +21,8 @@ class DashScreen extends StatelessWidget {
           color: AppColors.extraWhite,
           boxShadow: [
             BoxShadow(
-                blurRadius: 5,
-                spreadRadius: 3,
+                blurRadius: 7,
+                spreadRadius: 5,
                 color: AppColors.lGrey,
                 offset: Offset(3, 2))
           ],

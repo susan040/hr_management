@@ -32,7 +32,13 @@ class ImagePath {
   static const String meetingNotification =
       "$baseIconPath/meeting_notification.svg";
   static const String googleMeet = "$baseIconPath/google_meet.svg";
+  static const String myLocation = "$baseIconPath/my_location.svg";
+  static const String privacy = "$baseIconPath/privacy.svg";
+  static const String faq = "$baseIconPath/faq.svg";
   static const String laurze = "$baseIconPath/laurze.svg";
+  static const String helpCenter = "$baseIconPath/help_center.svg";
+  static const String chat = "$baseIconPath/chat.svg";
+  static const String rightArrow = "$baseIconPath/arrow.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
