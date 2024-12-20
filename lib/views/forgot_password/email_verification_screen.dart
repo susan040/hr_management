@@ -57,19 +57,14 @@ class EmailVerificationScreen extends StatelessWidget {
                     width: 52,
                     height: 54,
                     child: TextField(
-                      onChanged: (value) {
-                        if (value.isNotEmpty && value.length == 1) {
-                          controller.code.value =
-                              controller.code.value.padRight(index) +
-                                  value +
-                                  controller.code.value.substring(index + 1);
-                          FocusScope.of(context).nextFocus();
-                        }
-                      },
+                      controller: controller.controllers[index],
+                      focusNode: controller.focusNodes[index],
+                      onChanged: (value) =>
+                          controller.onChanged(value, index, context),
                       textAlign: TextAlign.center,
                       maxLength: 1,
                       keyboardType: TextInputType.number,
-                      textInputAction: TextInputAction.done,
+                      textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         counterText: '',
                         enabledBorder: OutlineInputBorder(
@@ -95,6 +90,7 @@ class EmailVerificationScreen extends StatelessWidget {
               ),
               SizedBox(height: 16),
               InkWell(
+                splashColor: AppColors.extraWhite,
                 onTap: controller.resendCode,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
