@@ -65,6 +65,14 @@ class RegisterScreen extends StatelessWidget {
                           textInputType: TextInputType.emailAddress),
                       SizedBox(height: 18),
                       CustomTextField(
+                          controller: c.addressController,
+                          hint: "Enter your address",
+                          validator: Validators.checkFieldEmpty,
+                          preIconPath: ImagePath.address,
+                          textInputAction: TextInputAction.done,
+                          textInputType: TextInputType.emailAddress),
+                      SizedBox(height: 18),
+                      CustomTextField(
                           controller: c.phoneController,
                           hint: "Enter your phone",
                           validator: Validators.checkPhoneField,
