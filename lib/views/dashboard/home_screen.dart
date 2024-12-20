@@ -38,9 +38,10 @@ class HomeScreen extends StatelessWidget {
                           fit: BoxFit.cover,
                           height: 50,
                           width: 50,
-                          imageUrl: "",
+                          imageUrl:
+                              "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUjE0Lifi2vFDlbtFjgQSwfMB3rfknaKL838HwGlNWPHMyDU2E",
                           errorWidget: (context, url, error) => Image.asset(
-                            "assets/images/profile.jpeg",
+                            "assets/images/blank_profile.jpg",
                             height: 50,
                             width: 50,
                             fit: BoxFit.fill,

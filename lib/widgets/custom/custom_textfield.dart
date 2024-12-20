@@ -100,7 +100,7 @@ class CustomTextField extends StatelessWidget {
           labelText: labelText,
           hintText: hint,
           hintStyle:
-              CustomTextStyles.f14W400(color: AppColors.secondaryTextColor),
+              CustomTextStyles.f12W400(color: AppColors.secondaryTextColor),
           filled: true,
           fillColor: fillColor ?? Colors.white,
           enabledBorder: OutlineInputBorder(
@@ -125,7 +125,7 @@ class CustomTextField extends StatelessWidget {
           contentPadding:
               EdgeInsets.symmetric(vertical: 14.0, horizontal: 10.0),
         ),
-        style: CustomTextStyles.f14W400(
+        style: CustomTextStyles.f12W400(
             color: (readOnly ?? false) ? AppColors.secondaryTextColor : null),
       ),
     );

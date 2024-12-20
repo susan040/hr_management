@@ -12,7 +12,6 @@ class HistoryScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
-        toolbarHeight: 47,
         title: Text(
           "Grievance History",
           style: CustomTextStyles.f14W600(),

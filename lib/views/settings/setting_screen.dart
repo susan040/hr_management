@@ -1,9 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/auth/login_screen.dart';
+import 'package:hr_management/views/settings/edit_profile_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -13,7 +16,6 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: AppColors.extraWhite,
         appBar: AppBar(
-          toolbarHeight: 47,
           centerTitle: true,
           backgroundColor: AppColors.extraWhite,
           title: Text(
@@ -24,7 +26,9 @@ class SettingScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 18),
               child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => LoginScreen());
+                  },
                   child: Icon(
                     Icons.logout,
                     color: AppColors.rejected,
@@ -45,9 +49,10 @@ class SettingScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                   height: 100,
                   width: 100,
-                  imageUrl: "",
+                  imageUrl:
+                      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUjE0Lifi2vFDlbtFjgQSwfMB3rfknaKL838HwGlNWPHMyDU2E",
                   errorWidget: (context, url, error) => Image.asset(
-                    "assets/images/profile.jpeg",
+                    "assets/images/blank_profile.jpg",
                     height: 100,
                     width: 100,
                     fit: BoxFit.cover,
@@ -82,8 +87,8 @@ class SettingScreen extends StatelessWidget {
             ),
             SizedBox(height: 9),
             InkWell(
-              onTap: (){
-                
+              onTap: () {
+                Get.to(() => EditProfileScreen());
               },
               child: Container(
                 height: 33,
@@ -91,7 +96,8 @@ class SettingScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: AppColors.extraWhite,
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: AppColors.primaryColor)),
+                    border:
+                        Border.all(width: 1, color: AppColors.primaryColor)),
                 child: Center(
                   child: Text(
                     "Edit Profile",
@@ -123,9 +129,7 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 14),
                   InkWell(
-                    onTap: () {
-
-                    },
+                    onTap: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

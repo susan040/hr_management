@@ -20,7 +20,7 @@ class AllServicesScreen extends StatelessWidget {
             },
             child: Icon(
               Icons.arrow_back_ios,
-              size: 22,
+              size: 19,
               color: Colors.black,
             )),
         centerTitle: true,
