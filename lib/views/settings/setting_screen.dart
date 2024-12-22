@@ -6,6 +6,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/views/auth/login_screen.dart';
+import 'package:hr_management/views/settings/about_us_screen.dart';
 import 'package:hr_management/views/settings/edit_profile_screen.dart';
 import 'package:hr_management/views/settings/faq_screen.dart';
 import 'package:hr_management/views/settings/privacy_policy_screen.dart';
@@ -109,10 +110,14 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 22),
-              padding:
-                  EdgeInsets.only(left: 25, right: 25, top: 20, bottom: 30),
+              margin: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(
+                left: 25,
+                right: 25,
+                top: 20,
+              ),
               width: double.infinity,
+              height: Get.height / 1.9,
               decoration: BoxDecoration(
                   color: AppColors.extraWhite,
                   borderRadius: BorderRadius.only(
@@ -120,7 +125,10 @@ class SettingScreen extends StatelessWidget {
                       topRight: Radius.circular(35)),
                   boxShadow: [
                     BoxShadow(
-                        spreadRadius: 2, blurRadius: 3, color: AppColors.lGrey)
+                        spreadRadius: 1,
+                        blurRadius: 2.5,
+                        color: AppColors.lGrey,
+                        offset: Offset(0, -1.5))
                   ]),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -223,7 +231,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => AboutUsScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -236,11 +246,12 @@ class SettingScreen extends StatelessWidget {
                                   color: AppColors.lGrey,
                                   borderRadius: BorderRadius.circular(8)),
                               child: Center(
-                                  child: SvgPicture.asset(ImagePath.faq)),
+                                  child:
+                                      SvgPicture.asset(ImagePath.helpCenter)),
                             ),
                             SizedBox(width: 18),
                             Text(
-                              "Help Center",
+                              "About Us",
                               style: CustomTextStyles.f12W400(),
                             ),
                           ],
@@ -278,7 +289,7 @@ class SettingScreen extends StatelessWidget {
                             ),
                             SizedBox(width: 18),
                             Text(
-                              "Help Center",
+                              "Set Face Recognition",
                               style: CustomTextStyles.f12W400(),
                             ),
                           ],

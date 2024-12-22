@@ -25,10 +25,10 @@ class PrivacyPolicyScreen extends StatelessWidget {
           style: CustomTextStyles.f14W600(),
         ),
       ),
-      body: Padding(
-        padding:
-            const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 20),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:
+              const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
