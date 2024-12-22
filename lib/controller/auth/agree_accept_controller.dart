@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class PrivacyPolicyController extends GetxController {
+class AgreeAndAcceptController extends GetxController {
   var isPrivacyPolicyAccepted = false.obs;
   var isTermsOfUseAccepted = false.obs;
 

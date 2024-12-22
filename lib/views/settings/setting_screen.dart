@@ -7,6 +7,8 @@ import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/views/auth/login_screen.dart';
 import 'package:hr_management/views/settings/edit_profile_screen.dart';
+import 'package:hr_management/views/settings/faq_screen.dart';
+import 'package:hr_management/views/settings/privacy_policy_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -159,7 +161,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => PrivacyPolicyScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -188,7 +192,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => FaqScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
