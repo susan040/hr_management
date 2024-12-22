@@ -11,7 +11,9 @@ class FaqScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
+        toolbarHeight: 50,
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -24,14 +26,14 @@ class FaqScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "FAQ",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
       ),
       body: ListView(
         children: [
           Padding(
             padding:
-                const EdgeInsets.only(left: 16, top: 8, bottom: 6, right: 16),
+                const EdgeInsets.only(left: 16, top: 14, bottom: 6, right: 16),
             child: Text("Frequently Asked Question (FAQ)",
                 style: CustomTextStyles.f14W600()),
           ),
@@ -41,6 +43,7 @@ class FaqScreen extends StatelessWidget {
               "A Frequently Asked Question (FAQ) line is a section that lists common questions and answers about a topic to help users quickly find information.",
               style:
                   CustomTextStyles.f12W400(color: AppColors.secondaryTextColor),
+              textAlign: TextAlign.justify,
             ),
           ),
           FaqItem(

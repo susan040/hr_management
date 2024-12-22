@@ -11,14 +11,17 @@ class HistoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
+        toolbarHeight: 50,
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
+        centerTitle: false,
         title: Text(
           "Grievance History",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 18),
+            padding: const EdgeInsets.only(right: 18, top: 16),
             child: InkWell(
               onTap: () {},
               child: Text(
@@ -31,7 +34,7 @@ class HistoryScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16, right: 16, top: 3),
+          padding: const EdgeInsets.only(left: 16, right: 16, top: 14),
           child: Column(
             children: [
               Row(

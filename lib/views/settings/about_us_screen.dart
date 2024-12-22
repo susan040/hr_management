@@ -32,7 +32,7 @@ class AboutUsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 20),
+              const EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

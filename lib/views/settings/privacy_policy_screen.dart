@@ -9,7 +9,9 @@ class PrivacyPolicyScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
+        toolbarHeight: 50,
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -22,20 +24,20 @@ class PrivacyPolicyScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Privacy Policy",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 20),
+              const EdgeInsets.only(left: 16, right: 16, top: 14, bottom: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.",
                 textAlign: TextAlign.justify,
-                style: CustomTextStyles.f14W400(),
+                style: CustomTextStyles.f12W400(),
               ),
               SizedBox(height: 15),
               Text(
@@ -52,7 +54,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "- Usage data\n\n"
                 "We may also collect automatically generated data when you use the service, such as IP address and browser type.",
                 textAlign: TextAlign.justify,
-                style: CustomTextStyles.f14W400(),
+                style: CustomTextStyles.f12W400(),
               ),
               SizedBox(height: 16),
               Text(
@@ -68,7 +70,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "- Improve the service\n\n"
                 "We may also share your data with third parties to improve our service or to comply with legal requirements.",
                 textAlign: TextAlign.justify,
-                style: CustomTextStyles.f14W400(),
+                style: CustomTextStyles.f12W400(),
               ),
               SizedBox(height: 20),
               Text(
@@ -79,7 +81,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
               Text(
                 "We take reasonable steps to secure your personal data, but we cannot guarantee absolute security.",
                 textAlign: TextAlign.justify,
-                style: CustomTextStyles.f14W400(),
+                style: CustomTextStyles.f12W400(),
               ),
               SizedBox(height: 20),
               Text(
@@ -91,7 +93,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "If you have any questions about this Privacy Policy, You can contact us:\n"
                 "By email: able.innovation23@gmail.com",
                 textAlign: TextAlign.justify,
-                style: CustomTextStyles.f14W400(),
+                style: CustomTextStyles.f12W400(),
               ),
             ],
           ),

@@ -18,6 +18,8 @@ class EditProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
+        toolbarHeight: 50,
+        elevation: 0,
         backgroundColor: AppColors.extraWhite,
         leading: InkWell(
             onTap: () {
@@ -31,7 +33,7 @@ class EditProfileScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Edit Profile",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
       ),
       body: Column(

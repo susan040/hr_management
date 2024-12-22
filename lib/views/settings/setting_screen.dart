@@ -19,11 +19,13 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: AppColors.extraWhite,
         appBar: AppBar(
+          toolbarHeight: 50,
+          elevation: 0,
           centerTitle: true,
           backgroundColor: AppColors.extraWhite,
           title: Text(
             "Profile",
-            style: CustomTextStyles.f14W600(),
+            style: CustomTextStyles.f14W600(color: AppColors.textColor),
           ),
           actions: [
             Padding(
@@ -42,7 +44,7 @@ class SettingScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(children: [
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
