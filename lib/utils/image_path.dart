@@ -39,6 +39,7 @@ class ImagePath {
   static const String helpCenter = "$baseIconPath/help_center.svg";
   static const String chat = "$baseIconPath/chat.svg";
   static const String rightArrow = "$baseIconPath/arrow.svg";
+  static const String arrowLeft = "$baseIconPath/arrow_left.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
@@ -49,4 +50,5 @@ class ImagePath {
   static const String emailVerification =
       "$baseImagePath/email_verification.png";
   static const String forgotPassword = "$baseImagePath/forgot_password.png";
+  static const String leftArrow = "$baseImagePath/arrow_left.png";
 }

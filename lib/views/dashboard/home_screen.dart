@@ -7,6 +7,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/views/dashboard/all_services_screen.dart';
+import 'package:hr_management/views/dashboard/notification_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 import 'package:hr_management/widgets/tab_bar_widget.dart';
 
@@ -63,36 +64,41 @@ class HomeScreen extends StatelessWidget {
                           ]),
                     ]),
                   ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 6,
-                          right: 20,
-                        ),
-                        child: SvgPicture.asset(
-                          ImagePath.notification,
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 15,
-                        left: 10,
-                        child: Container(
-                          height: 18,
-                          width: 18,
-                          decoration: BoxDecoration(
-                              color: AppColors.rejected,
-                              borderRadius: BorderRadius.circular(100)),
-                          child: Center(
-                            child: Text(
-                              "3",
-                              style: CustomTextStyles.f10W400(
-                                  color: AppColors.extraWhite),
-                            ),
+                  InkWell(
+                    onTap: () {
+                      Get.to(() => NotificationScreen());
+                    },
+                    child: Stack(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 6,
+                            right: 20,
+                          ),
+                          child: SvgPicture.asset(
+                            ImagePath.notification,
                           ),
                         ),
-                      )
-                    ],
+                        Positioned(
+                          bottom: 15,
+                          left: 10,
+                          child: Container(
+                            height: 18,
+                            width: 18,
+                            decoration: BoxDecoration(
+                                color: AppColors.rejected,
+                                borderRadius: BorderRadius.circular(100)),
+                            child: Center(
+                              child: Text(
+                                "3",
+                                style: CustomTextStyles.f10W400(
+                                    color: AppColors.extraWhite),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

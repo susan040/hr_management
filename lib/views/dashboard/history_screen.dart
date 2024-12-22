@@ -23,7 +23,7 @@ class HistoryScreen extends StatelessWidget {
               onTap: () {},
               child: Text(
                 "Mark all as read",
-                style: CustomTextStyles.f12W400(color: AppColors.primaryColor),
+                style: CustomTextStyles.f11W400(color: AppColors.primaryColor),
               ),
             ),
           )
@@ -47,9 +47,9 @@ class HistoryScreen extends StatelessWidget {
                     margin: EdgeInsets.only(
                       top: 3,
                     ),
-                    height: 1,
+                    height: 1.2,
                     width: Get.width / 1.27,
-                    color: AppColors.lGrey,
+                    color: AppColors.shimmerBase,
                   )
                 ],
               ),
@@ -81,9 +81,9 @@ class HistoryScreen extends StatelessWidget {
                     margin: EdgeInsets.only(
                       top: 3,
                     ),
-                    height: 1,
+                    height: 1.2,
                     width: Get.width / 1.4,
-                    color: AppColors.lGrey,
+                    color: AppColors.shimmerBase,
                   )
                 ],
               ),
@@ -115,9 +115,9 @@ class HistoryScreen extends StatelessWidget {
                     margin: EdgeInsets.only(
                       top: 3,
                     ),
-                    height: 1,
+                    height: 1.2,
                     width: Get.width / 1.4,
-                    color: AppColors.lGrey,
+                    color: AppColors.shimmerBase,
                   )
                 ],
               ),
