@@ -6,9 +6,9 @@ import 'package:hr_management/controller/dashboard/setting_screen_controller.dar
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
-import 'package:hr_management/views/auth/login_screen.dart';
 import 'package:hr_management/views/settings/about_us_screen.dart';
 import 'package:hr_management/views/settings/biometrics_screen.dart';
+import 'package:hr_management/views/settings/chat_screen.dart';
 import 'package:hr_management/views/settings/edit_profile_screen.dart';
 import 'package:hr_management/views/settings/faq_screen.dart';
 import 'package:hr_management/views/settings/privacy_policy_screen.dart';
@@ -35,7 +35,7 @@ class SettingScreen extends StatelessWidget {
               padding: const EdgeInsets.only(right: 18),
               child: InkWell(
                   onTap: () {
-                    Get.to(() => LoginScreen());
+                    c.showMyDialog(context);
                   },
                   child: Icon(
                     Icons.logout,
@@ -314,7 +314,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => ChatScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

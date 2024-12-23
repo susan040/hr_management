@@ -18,9 +18,10 @@ class AgreeAndAcceptScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         title: Text(
           "Privacy Policy",
-          style: CustomTextStyles.f16W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
       ),
       body: SingleChildScrollView(
