@@ -14,6 +14,7 @@ class AllServicesScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -26,7 +27,7 @@ class AllServicesScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "All Services",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.textColor),
         ),
       ),
       body: Column(

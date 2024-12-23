@@ -14,6 +14,7 @@ class NotificationScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -30,12 +31,12 @@ class NotificationScreen extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 18),
+            padding: const EdgeInsets.only(right: 18, top: 18),
             child: InkWell(
               onTap: () {},
               child: Text(
                 "Mark all as read",
-                style: CustomTextStyles.f11W400(color: AppColors.primaryColor),
+                style: CustomTextStyles.f12W400(color: AppColors.primaryColor),
               ),
             ),
           )
@@ -117,9 +118,9 @@ class NotificationWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, top: 15),
-      padding: EdgeInsets.only(right: 12, top: 10),
-      height: 72,
+      margin: EdgeInsets.only(left: 16, right: 16, top: 10),
+      padding: EdgeInsets.only(right: 10, top: 10),
+      height: 77,
       width: double.infinity,
       decoration: BoxDecoration(
           color: AppColors.extraWhite,
@@ -140,7 +141,7 @@ class NotificationWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 12, right: 10),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 height: 47,
                 width: 47,
                 decoration: BoxDecoration(
@@ -158,14 +159,14 @@ class NotificationWidget extends StatelessWidget {
                 children: [
                   Text(
                     text,
-                    style: CustomTextStyles.f12W600(),
+                    style: CustomTextStyles.f14W600(),
                   ),
                   SizedBox(height: 2.5),
                   SizedBox(
                     width: 210,
                     child: Text(
                       text2,
-                      style: CustomTextStyles.f10W400(
+                      style: CustomTextStyles.f11W400(
                           color: AppColors.secondaryTextColor),
                       maxLines: 3,
                     ),

@@ -26,7 +26,7 @@ class HistoryScreen extends StatelessWidget {
               onTap: () {},
               child: Text(
                 "Mark all as read",
-                style: CustomTextStyles.f11W400(color: AppColors.primaryColor),
+                style: CustomTextStyles.f12W400(color: AppColors.primaryColor),
               ),
             ),
           )

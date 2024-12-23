@@ -42,7 +42,7 @@ class FaqScreen extends StatelessWidget {
             child: Text(
               "A Frequently Asked Question (FAQ) line is a section that lists common questions and answers about a topic to help users quickly find information.",
               style:
-                  CustomTextStyles.f12W400(color: AppColors.secondaryTextColor),
+                  CustomTextStyles.f14W400(color: AppColors.secondaryTextColor),
               textAlign: TextAlign.justify,
             ),
           ),
@@ -107,7 +107,7 @@ class FaqItem extends StatelessWidget {
             padding: const EdgeInsets.only(left: 18, right: 18, bottom: 10),
             child: Text(
               answer,
-              style: CustomTextStyles.f12W400(
+              style: CustomTextStyles.f14W400(
                 color: AppColors.secondaryTextColor,
               ),
               textAlign: TextAlign.justify,

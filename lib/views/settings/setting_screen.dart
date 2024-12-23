@@ -2,17 +2,20 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:hr_management/controller/dashboard/setting_screen_controller.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/views/auth/login_screen.dart';
 import 'package:hr_management/views/settings/about_us_screen.dart';
+import 'package:hr_management/views/settings/biometrics_screen.dart';
 import 'package:hr_management/views/settings/edit_profile_screen.dart';
 import 'package:hr_management/views/settings/faq_screen.dart';
 import 'package:hr_management/views/settings/privacy_policy_screen.dart';
 
 class SettingScreen extends StatelessWidget {
-  const SettingScreen({super.key});
+  final c = Get.put(SettingScreenController());
+  SettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -141,7 +144,13 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 14),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      //final location = "chauthe";
+
+                      // Uri mapLocation = Uri.parse(
+                      //     "https://www.google.com/maps/search/?api=1&query=${location}");
+                      c.launchURL();
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -160,7 +169,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "My Location",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),
@@ -191,7 +200,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "Privacy Policy",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),
@@ -222,7 +231,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "FAQ",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),
@@ -254,7 +263,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "About Us",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),
@@ -269,7 +278,9 @@ class SettingScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 14),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => BiometricsScreen());
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -292,7 +303,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "Set Face Recognition",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),
@@ -324,7 +335,7 @@ class SettingScreen extends StatelessWidget {
                             SizedBox(width: 18),
                             Text(
                               "Chat with Manager",
-                              style: CustomTextStyles.f12W400(),
+                              style: CustomTextStyles.f14W400(),
                             ),
                           ],
                         ),

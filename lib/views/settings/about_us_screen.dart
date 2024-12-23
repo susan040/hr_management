@@ -41,7 +41,7 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'At our HR management platform, we provide a wide range of tools and services designed to optimize HR processes for businesses and organizations of all sizes. Whether you are managing a small team or a large workforce, we ensure that your HR needs are efficiently addressed. Our app combines technology and user-friendly features to help you automate tasks, improve communication, and enhance employee satisfaction.',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 16),
@@ -49,7 +49,7 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'Our vision is to empower organizations by offering innovative, scalable, and secure HR solutions that support efficient workforce management. We aim to create a seamless HR experience that maximizes productivity, minimizes administrative burden, and fosters a positive workplace culture.',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 16),
@@ -57,7 +57,7 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'Our mission is to provide organizations with a powerful platform to manage their workforce efficiently. By leveraging technology, we strive to create solutions that simplify HR processes, improve operational efficiency, and ensure that employees are supported and motivated.',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 16),
@@ -83,7 +83,7 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'With years of experience in the HR domain, we understand the complexities of managing human resources. Our platform is tailored to meet the specific needs of businesses, offering flexibility, scalability, and advanced features that adapt to your company’s growth. Some of the key reasons why you should choose our platform include:',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 12),
@@ -107,7 +107,7 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'Our team consists of HR professionals, software developers, and customer service experts, all working together to provide you with a seamless HR management experience. We are constantly innovating to meet the evolving needs of our clients, ensuring that our platform remains at the forefront of the HR tech industry.',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 16),
@@ -115,13 +115,13 @@ class AboutUsScreen extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 'Have questions or need assistance? Our support team is here to help! Reach out to us via the contact details below, and we will get back to you as soon as possible.',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 8),
               Text(
                 'Email: support@hrmanagement.com\nPhone: +1 234 567 890\nWebsite: www.hrmanagement.com',
-                style: CustomTextStyles.f12W400(),
+                style: CustomTextStyles.f14W400(),
                 textAlign: TextAlign.justify,
               ),
             ],
@@ -146,7 +146,7 @@ class BulletPoint extends StatelessWidget {
         Expanded(
             child: Text(
           text,
-          style: CustomTextStyles.f12W400(),
+          style: CustomTextStyles.f14W400(),
         )),
       ],
     );
