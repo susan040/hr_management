@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
+import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
 import 'package:hr_management/views/splash_screen.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           highlightColor: AppColors.extraWhite,
           focusColor: AppColors.extraWhite,
           splashColor: AppColors.extraWhite),
-      home: SplashScreen(),
+      home: AttendanceHistoryScreen(),
     );
   }
 }

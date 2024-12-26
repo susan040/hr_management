@@ -71,8 +71,7 @@ class EditProfileWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             InkWell(
                               highlightColor: AppColors.extraWhite,

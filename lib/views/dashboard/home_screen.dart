@@ -239,28 +239,34 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ServicesWidget(
-                      iconContainerColor: AppColors.blue,
-                      iconPath: ImagePath.attendanceManagement,
-                      title: "Attendance",
-                      subtitle: "Management",
-                      onTap: () {
-                        Get.to(() => AttendanceHistoryScreen());
-                      },
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.blue,
+                        iconPath: ImagePath.attendanceManagement,
+                        title: "Attendance",
+                        subtitle: "Management",
+                        onTap: () {
+                          Get.to(() => AttendanceHistoryScreen());
+                        },
+                      ),
                     ),
-                    ServicesWidget(
-                      iconContainerColor: AppColors.purple,
-                      iconPath: ImagePath.appeal,
-                      title: "Attendance",
-                      subtitle: "Appeal",
-                      onTap: () {},
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.purple,
+                        iconPath: ImagePath.appeal,
+                        title: "Attendance",
+                        subtitle: "Appeal",
+                        onTap: () {},
+                      ),
                     ),
-                    ServicesWidget(
-                      iconContainerColor: AppColors.yellow,
-                      iconPath: ImagePath.leaveApplication,
-                      title: "Leave",
-                      subtitle: "Application",
-                      onTap: () {},
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.yellow,
+                        iconPath: ImagePath.leaveApplication,
+                        title: "Leave",
+                        subtitle: "Application",
+                        onTap: () {},
+                      ),
                     ),
                   ],
                 ),
@@ -271,26 +277,32 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ServicesWidget(
-                      iconContainerColor: AppColors.lightGreen,
-                      iconPath: ImagePath.paySlip,
-                      title: "Pay Slip",
-                      subtitle: "Management",
-                      onTap: () {},
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.lightGreen,
+                        iconPath: ImagePath.paySlip,
+                        title: "Pay Slip",
+                        subtitle: "Management",
+                        onTap: () {},
+                      ),
                     ),
-                    ServicesWidget(
-                      iconContainerColor: AppColors.darkblue,
-                      iconPath: ImagePath.grievance,
-                      title: "Grievance",
-                      subtitle: "Redressal",
-                      onTap: () {},
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.darkblue,
+                        iconPath: ImagePath.grievance,
+                        title: "Grievance",
+                        subtitle: "Redressal",
+                        onTap: () {},
+                      ),
                     ),
-                    ServicesWidget(
-                      iconContainerColor: AppColors.darkRed,
-                      iconPath: ImagePath.shift,
-                      title: "Shift",
-                      subtitle: "Swapping",
-                      onTap: () {},
+                    Expanded(
+                      child: ServicesWidget(
+                        iconContainerColor: AppColors.darkRed,
+                        iconPath: ImagePath.shift,
+                        title: "Shift",
+                        subtitle: "Swapping",
+                        onTap: () {},
+                      ),
                     ),
                   ],
                 ),

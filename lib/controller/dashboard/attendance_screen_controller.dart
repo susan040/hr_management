@@ -1,11 +1,18 @@
+import 'dart:io';
+
 import 'package:get/get.dart';
 import 'package:hr_management/models/attendance.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
 class AttendanceScreenController extends GetxController {
   var selectedMonth = DateTime.now().month.obs;
   var selectedYear = DateTime.now().year.obs;
   var attendanceList = <Attendance>[].obs;
+  var location = "Pokhar-25 Hemja Milan Chowk".obs;
+  var checkInTime = "10:15 AM".obs;
+  var checkOutTime = "7:18 PM".obs;
+  RxBool isCheckedOut = false.obs;
 
   @override
   void onInit() {
@@ -34,25 +41,27 @@ class AttendanceScreenController extends GetxController {
       );
     }
 
-    // Example attendance records
+    attendanceList.sort((a, b) {
+      if (a.isToday) return -1;
+      if (b.isToday) return 1;
+      return 0;
+    });
+
     updateAttendanceRecord("10:15 AM", "7:18 PM");
   }
 
   void updateAttendanceRecord(String checkIn, String checkOut) {
-    DateTime today = DateTime.now(); // Get today's date
+    DateTime today = DateTime.now();
     for (var record in attendanceList) {
       if (record.isAbsent) {
-        // If the person is absent, show "Absent"
         record.checkIn = "Absent";
         record.checkOut = "Absent";
       } else {
-        // If the person is present, update check-in and check-out times
         record.checkIn = checkIn;
 
-        // Check if the record is for today, if yes set check-out to "--"
         if (int.parse(record.date) == today.day &&
             record.date == DateFormat('d').format(today)) {
-          record.checkOut = "--"; // Set today's check-out to "--"
+          record.checkOut = "--";
         } else {
           record.checkOut = checkOut;
         }
@@ -71,5 +80,16 @@ class AttendanceScreenController extends GetxController {
       selectedYear.value--;
     }
     generateMonthlyAttendance(selectedYear.value, selectedMonth.value);
+  }
+
+  Rx<File?> pickedImage = Rx<File?>(null);
+
+  // Function to pick an image
+  Future<void> pickImage() async {
+    final ImagePicker _picker = ImagePicker();
+    final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      pickedImage.value = File(image.path);
+    }
   }
 }

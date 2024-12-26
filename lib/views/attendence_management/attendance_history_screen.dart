@@ -4,6 +4,8 @@ import 'package:hr_management/controller/dashboard/attendance_screen_controller.
 import 'package:hr_management/models/attendance.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
+import 'package:hr_management/views/attendence_management/attendance_details_screen.dart';
+import 'package:hr_management/views/attendence_management/location_screen.dart';
 import 'package:intl/intl.dart';
 
 class AttendanceHistoryScreen extends StatelessWidget {
@@ -89,97 +91,120 @@ class AttendanceTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 6),
-      padding: EdgeInsets.only(left: 10, right: 29, top: 10, bottom: 10),
-      height: 70,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: attendance.isAbsent
-            ? AppColors.rejected
-            : attendance.isToday
-                ? AppColors.extraWhite
-                : AppColors.extraWhite,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(width: 0.5, color: AppColors.borderColor),
-        boxShadow: [
-          BoxShadow(
+    return InkWell(
+      onTap: () {
+        if (attendance.isAbsent)
+          Get.to(() => AttendanceDetailsScreen());
+        else
+          Get.to(() => LocationScreen());
+      },
+      child: Container(
+        margin: EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 6),
+        padding: EdgeInsets.only(left: 10, right: 29, top: 10, bottom: 10),
+        height: 70,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: attendance.isAbsent
+              ? AppColors.rejected
+              : attendance.isToday
+                  ? AppColors.extraWhite
+                  : AppColors.extraWhite,
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(width: 0.5, color: AppColors.borderColor),
+          boxShadow: [
+            BoxShadow(
               spreadRadius: 2,
               blurRadius: 1,
               color: AppColors.lGrey,
-              offset: Offset(1, 2))
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            width: 66,
-            decoration: BoxDecoration(
-              color: AppColors.extraWhite,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(width: 0.5, color: AppColors.borderColor),
+              offset: Offset(1, 2),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: 66,
+              decoration: BoxDecoration(
+                color: attendance.isToday
+                    ? AppColors.primaryColor
+                    : AppColors.extraWhite,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(width: 0.5, color: AppColors.borderColor),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    attendance.isToday ? "Today" : attendance.date,
+                    style: CustomTextStyles.f12W500(
+                      color: attendance.isAbsent
+                          ? AppColors.rejected
+                          : attendance.isToday
+                              ? AppColors.extraWhite
+                              : AppColors.primaryColor,
+                    ),
+                  ),
+                  Text(
+                    attendance.day,
+                    style: CustomTextStyles.f12W500(
+                      color: attendance.isAbsent
+                          ? AppColors.rejected
+                          : attendance.isToday
+                              ? AppColors.highlightColor
+                              : AppColors.primaryColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  attendance.date,
-                  style: CustomTextStyles.f12W500(
+                  "Check in",
+                  style: CustomTextStyles.f14W500(
                     color: attendance.isAbsent
-                        ? AppColors.rejected
+                        ? AppColors.extraWhite
                         : AppColors.primaryColor,
                   ),
                 ),
+                SizedBox(height: 3.5),
                 Text(
-                  attendance.day,
-                  style: CustomTextStyles.f12W500(
+                  attendance.checkIn,
+                  style: CustomTextStyles.f12W400(
                     color: attendance.isAbsent
-                        ? AppColors.rejected
-                        : AppColors.primaryColor,
+                        ? AppColors.extraWhite
+                        : AppColors.secondaryTextColor,
                   ),
                 ),
               ],
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Check in",
-                  style: CustomTextStyles.f14W500(
-                    color: attendance.isAbsent
-                        ? AppColors.extraWhite
-                        : AppColors.primaryColor,
-                  )),
-              SizedBox(height: 3.5),
-              Text(attendance.checkIn,
-                  style: CustomTextStyles.f12W400(
-                    color: attendance.isAbsent
-                        ? AppColors.extraWhite
-                        : AppColors.secondaryTextColor,
-                  )),
-            ],
-          ),
-          SizedBox(width: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Check Out",
+            SizedBox(width: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Check Out",
                   style: CustomTextStyles.f14W500(
                     color: attendance.isAbsent
                         ? AppColors.extraWhite
                         : AppColors.rejected,
-                  )),
-              SizedBox(height: 3.5),
-              Text(attendance.checkOut,
+                  ),
+                ),
+                SizedBox(height: 3.5),
+                Text(
+                  attendance.checkOut,
                   style: CustomTextStyles.f12W400(
                     color: attendance.isAbsent
                         ? AppColors.extraWhite
                         : AppColors.secondaryTextColor,
-                  )),
-            ],
-          ),
-        ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
