@@ -126,7 +126,7 @@ class CustomTextField extends StatelessWidget {
               EdgeInsets.symmetric(vertical: 14.0, horizontal: 10.0),
         ),
         style: CustomTextStyles.f12W400(
-            color: (readOnly ?? false) ? AppColors.secondaryTextColor : null),
+            color: (readOnly ?? false) ? AppColors.backGroundDark : null),
       ),
     );
   }

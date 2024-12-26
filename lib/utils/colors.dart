@@ -7,6 +7,7 @@ class AppColors {
   static const Color backGroundColor = Color(0xFFF8F9FA);
   static const secondaryColor = Color(0xFF65A1D4);
   static const highlightColor = Color(0xFFE3F2FD);
+  static const indigo = Color(0xFF6372AF);
 
   static const Color lGrey = Color(0xFFF4F3F2);
   static const Color textColor = Color(0xFF000000);

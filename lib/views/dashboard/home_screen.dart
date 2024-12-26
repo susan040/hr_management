@@ -6,6 +6,7 @@ import 'package:hr_management/controller/dashboard/home_screen_controller.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/attendence_appeal/appeal_history_screen.dart';
 import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
 import 'package:hr_management/views/dashboard/all_services_screen.dart';
 import 'package:hr_management/views/dashboard/notification_screen.dart';
@@ -239,34 +240,30 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.blue,
-                        iconPath: ImagePath.attendanceManagement,
-                        title: "Attendance",
-                        subtitle: "Management",
-                        onTap: () {
-                          Get.to(() => AttendanceHistoryScreen());
-                        },
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.blue,
+                      iconPath: ImagePath.attendanceManagement,
+                      title: "Attendance",
+                      subtitle: "Management",
+                      onTap: () {
+                        Get.to(() => AttendanceHistoryScreen());
+                      },
                     ),
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.purple,
-                        iconPath: ImagePath.appeal,
-                        title: "Attendance",
-                        subtitle: "Appeal",
-                        onTap: () {},
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.purple,
+                      iconPath: ImagePath.appeal,
+                      title: "Attendance",
+                      subtitle: "Appeal",
+                      onTap: () {
+                        Get.to(() => AppealHistoryScreen());
+                      },
                     ),
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.yellow,
-                        iconPath: ImagePath.leaveApplication,
-                        title: "Leave",
-                        subtitle: "Application",
-                        onTap: () {},
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.yellow,
+                      iconPath: ImagePath.leaveApplication,
+                      title: "Leave",
+                      subtitle: "Application",
+                      onTap: () {},
                     ),
                   ],
                 ),
@@ -277,32 +274,26 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.lightGreen,
-                        iconPath: ImagePath.paySlip,
-                        title: "Pay Slip",
-                        subtitle: "Management",
-                        onTap: () {},
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.lightGreen,
+                      iconPath: ImagePath.paySlip,
+                      title: "Pay Slip",
+                      subtitle: "Management",
+                      onTap: () {},
                     ),
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.darkblue,
-                        iconPath: ImagePath.grievance,
-                        title: "Grievance",
-                        subtitle: "Redressal",
-                        onTap: () {},
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.darkblue,
+                      iconPath: ImagePath.grievance,
+                      title: "Grievance",
+                      subtitle: "Redressal",
+                      onTap: () {},
                     ),
-                    Expanded(
-                      child: ServicesWidget(
-                        iconContainerColor: AppColors.darkRed,
-                        iconPath: ImagePath.shift,
-                        title: "Shift",
-                        subtitle: "Swapping",
-                        onTap: () {},
-                      ),
+                    ServicesWidget(
+                      iconContainerColor: AppColors.darkRed,
+                      iconPath: ImagePath.shift,
+                      title: "Shift",
+                      subtitle: "Swapping",
+                      onTap: () {},
                     ),
                   ],
                 ),
