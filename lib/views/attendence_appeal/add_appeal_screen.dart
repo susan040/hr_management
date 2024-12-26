@@ -83,11 +83,12 @@ class AddAppealScreen extends StatelessWidget {
                           color: AppColors.brown,
                           shape: BoxShape.circle,
                         ),
-                        defaultTextStyle: CustomTextStyles.f12W400(
+                        defaultTextStyle: CustomTextStyles.f12W600(
                             color: AppColors.extraWhite),
-                        todayTextStyle: CustomTextStyles.f12W400(
+                        todayTextStyle: CustomTextStyles.f12W600(
                             color: AppColors.extraWhite),
-                        selectedTextStyle: TextStyle(color: Colors.white),
+                        selectedTextStyle: CustomTextStyles.f12W600(
+                            color: AppColors.extraWhite),
                       ),
                       availableCalendarFormats: const {
                         CalendarFormat.month: 'Month',
