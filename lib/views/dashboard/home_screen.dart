@@ -10,6 +10,7 @@ import 'package:hr_management/views/attendence_appeal/appeal_history_screen.dart
 import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
 import 'package:hr_management/views/dashboard/all_services_screen.dart';
 import 'package:hr_management/views/dashboard/notification_screen.dart';
+import 'package:hr_management/views/leave_application/leave_history_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 import 'package:hr_management/widgets/tab_bar_widget.dart';
 
@@ -263,7 +264,9 @@ class HomeScreen extends StatelessWidget {
                       iconPath: ImagePath.leaveApplication,
                       title: "Leave",
                       subtitle: "Application",
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => LeaveHistoryScreen());
+                      },
                     ),
                   ],
                 ),

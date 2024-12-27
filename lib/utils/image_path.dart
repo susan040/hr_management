@@ -42,6 +42,7 @@ class ImagePath {
   static const String arrowLeft = "$baseIconPath/arrow_left.svg";
   static const String faceRecognition = "$baseIconPath/face_recognition.svg";
   static const String time = "$baseIconPath/time.svg";
+  static const String document = "$baseIconPath/document.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
@@ -54,4 +55,6 @@ class ImagePath {
   static const String forgotPassword = "$baseImagePath/forgot_password.png";
   static const String leftArrow = "$baseImagePath/arrow_left.png";
   static const String attendanceAppeal = "$baseImagePath/attendance_appeal.png";
+  static const String leaveApplicationSuccess =
+      "$baseImagePath/leave_success.png";
 }
