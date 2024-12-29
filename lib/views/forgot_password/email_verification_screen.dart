@@ -17,6 +17,7 @@ class EmailVerificationScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -29,7 +30,7 @@ class EmailVerificationScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Verification",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.backGroundDark),
         ),
       ),
       body: SingleChildScrollView(
@@ -47,7 +48,7 @@ class EmailVerificationScreen extends StatelessWidget {
               SizedBox(height: 40),
               Text(
                 'Enter Verification Code',
-                style: CustomTextStyles.f14W600(),
+                style: CustomTextStyles.f14W500(),
               ),
               SizedBox(height: 20),
               Row(

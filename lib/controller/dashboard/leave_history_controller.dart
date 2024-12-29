@@ -6,10 +6,13 @@ import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
 
 class LeaveHistoryController extends GetxController {
+  final leaveFormKey = GlobalKey<FormState>();
   var selectedIndex = 0.obs;
   RxString selectLeaveType = ''.obs;
   final selectDateController = TextEditingController();
   final selectTimeController = TextEditingController();
+  final reasonController = TextEditingController();
+  final approverController = TextEditingController();
 
   void changeTab(int index) {
     selectedIndex.value = index;

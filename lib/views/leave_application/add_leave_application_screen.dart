@@ -46,169 +46,173 @@ class AddLeaveApplicationScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(6),
               border: Border.all(width: 1, color: AppColors.borderColor)),
           child: Form(
+              key: c.leaveFormKey,
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Approver",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              CustomTextField(
-                  validator: Validators.checkFieldEmpty,
-                  hint: "Enter your name",
-                  textInputAction: TextInputAction.next,
-                  textInputType: TextInputType.text),
-              SizedBox(height: 18),
-              Text(
-                "Leave Type",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              Theme(
-                data: Theme.of(context)
-                    .copyWith(canvasColor: AppColors.extraWhite),
-                child: Obx(() => Container(
-                      height: 50,
-                      child: DropdownButtonFormField<String>(
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'This field is required';
-                          }
-                          return null;
-                        },
-                        value: c.selectLeaveType.value.isEmpty
-                            ? null
-                            : c.selectLeaveType.value,
-                        hint: Text(
-                          "Select leave type",
-                          style: CustomTextStyles.f12W400(
-                              color: AppColors.secondaryTextColor),
-                        ),
-                        decoration: const InputDecoration(
-                          contentPadding:
-                              EdgeInsets.only(bottom: 10, left: 14, right: 14),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: AppColors.secondaryColor, width: 1),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: AppColors.primaryColor, width: 1),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.red, width: 1),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.red, width: 1),
-                          ),
-                        ),
-                        items: c.leaveTypes
-                            .map((option) => DropdownMenuItem<String>(
-                                  value: option,
-                                  child: Text(
-                                    option,
-                                    style: CustomTextStyles.f12W400(),
-                                  ),
-                                ))
-                            .toList(),
-                        onChanged: (value) {
-                          c.updateLeaveType(value!);
-                        },
-                      ),
-                    )),
-              ),
-              SizedBox(height: 18),
-              Text(
-                "Date",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              CustomTextField(
-                  readOnly: true,
-                  onTap: () => c.chooseDate(context),
-                  controller: c.selectDateController,
-                  validator: Validators.checkFieldEmpty,
-                  suffixIconPath: ImagePath.calender,
-                  hint: "YYYY-MM-DD",
-                  textInputAction: TextInputAction.done,
-                  textInputType: TextInputType.none),
-              SizedBox(height: 18),
-              Text(
-                "Reason",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              TextFormField(
-                style:
-                    CustomTextStyles.f12W400(color: AppColors.backGroundDark),
-                maxLines: 6,
-                textInputAction: TextInputAction.next,
-                decoration: InputDecoration(
-                  hintText: "Write here",
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: const BorderSide(
-                        width: 1, color: AppColors.secondaryColor),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Approver",
+                    style: CustomTextStyles.f14W500(),
                   ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide:
-                        const BorderSide(width: 1, color: AppColors.errorColor),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                      controller: c.approverController,
+                      validator: Validators.checkFieldEmpty,
+                      hint: "Enter your name",
+                      textInputAction: TextInputAction.next,
+                      textInputType: TextInputType.text),
+                  SizedBox(height: 18),
+                  Text(
+                    "Leave Type",
+                    style: CustomTextStyles.f14W500(),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: const BorderSide(
-                        width: 1, color: AppColors.primaryColor),
+                  SizedBox(height: 10),
+                  Theme(
+                    data: Theme.of(context)
+                        .copyWith(canvasColor: AppColors.extraWhite),
+                    child: Obx(() => Container(
+                          height: 50,
+                          child: DropdownButtonFormField<String>(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'This field is required';
+                              }
+                              return null;
+                            },
+                            value: c.selectLeaveType.value.isEmpty
+                                ? null
+                                : c.selectLeaveType.value,
+                            hint: Text(
+                              "Select leave type",
+                              style: CustomTextStyles.f12W400(
+                                  color: AppColors.secondaryTextColor),
+                            ),
+                            decoration: const InputDecoration(
+                              contentPadding: EdgeInsets.only(
+                                  bottom: 10, left: 14, right: 14),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.secondaryColor, width: 1),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: AppColors.primaryColor, width: 1),
+                              ),
+                              errorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 1),
+                              ),
+                              focusedErrorBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.red, width: 1),
+                              ),
+                            ),
+                            items: c.leaveTypes
+                                .map((option) => DropdownMenuItem<String>(
+                                      value: option,
+                                      child: Text(
+                                        option,
+                                        style: CustomTextStyles.f12W400(),
+                                      ),
+                                    ))
+                                .toList(),
+                            onChanged: (value) {
+                              c.updateLeaveType(value!);
+                            },
+                          ),
+                        )),
                   ),
-                  errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide:
-                        const BorderSide(width: 1, color: AppColors.errorColor),
+                  SizedBox(height: 18),
+                  Text(
+                    "Date",
+                    style: CustomTextStyles.f14W500(),
                   ),
-                  hintStyle: CustomTextStyles.f12W400(
-                      color: AppColors.secondaryTextColor),
-                ),
-                //controller: c.reasonController,
-              ),
-              SizedBox(height: 18),
-              Text(
-                "Substitute",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              CustomTextField(
-                  hint: "substitute",
-                  textInputAction: TextInputAction.next,
-                  textInputType: TextInputType.text),
-              SizedBox(height: 18),
-              Text(
-                "Documents",
-                style: CustomTextStyles.f14W500(),
-              ),
-              SizedBox(height: 10),
-              Obx(
-                () => CustomTextField(
-                    readOnly: true,
-                    controller:
-                        TextEditingController(text: c.pdfFileName.value),
-                    validator: Validators.checkFieldEmpty,
-                    suffixIconPath: ImagePath.document,
-                    hint: "Choose File",
-                    onTap: () {
-                      c.pickPdf();
-                    },
+                  SizedBox(height: 10),
+                  CustomTextField(
+                      readOnly: true,
+                      onTap: () => c.chooseDate(context),
+                      controller: c.selectDateController,
+                      validator: Validators.checkFieldEmpty,
+                      suffixIconPath: ImagePath.calender,
+                      hint: "YYYY-MM-DD",
+                      textInputAction: TextInputAction.done,
+                      textInputType: TextInputType.none),
+                  SizedBox(height: 18),
+                  Text(
+                    "Reason",
+                    style: CustomTextStyles.f14W500(),
+                  ),
+                  SizedBox(height: 10),
+                  TextFormField(
+                    style: CustomTextStyles.f12W400(
+                        color: AppColors.backGroundDark),
+                    maxLines: 6,
                     textInputAction: TextInputAction.next,
-                    textInputType: TextInputType.text),
-              ),
-              SizedBox(height: 25),
-              CustomElevatedButton(
-                  title: "Apply",
-                  onTap: () {
-                    Get.to(() => ApplicationSuccessfulScreen());
-                  })
-            ],
-          )),
+                    decoration: InputDecoration(
+                      hintText: "Write here",
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: const BorderSide(
+                            width: 1, color: AppColors.secondaryColor),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: const BorderSide(
+                            width: 1, color: AppColors.errorColor),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: const BorderSide(
+                            width: 1, color: AppColors.primaryColor),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: const BorderSide(
+                            width: 1, color: AppColors.errorColor),
+                      ),
+                      hintStyle: CustomTextStyles.f12W400(
+                          color: AppColors.secondaryTextColor),
+                    ),
+                    controller: c.reasonController,
+                  ),
+                  SizedBox(height: 18),
+                  Text(
+                    "Substitute",
+                    style: CustomTextStyles.f14W500(),
+                  ),
+                  SizedBox(height: 10),
+                  CustomTextField(
+                      hint: "substitute",
+                      textInputAction: TextInputAction.next,
+                      textInputType: TextInputType.text),
+                  SizedBox(height: 18),
+                  Text(
+                    "Documents",
+                    style: CustomTextStyles.f14W500(),
+                  ),
+                  SizedBox(height: 10),
+                  Obx(
+                    () => CustomTextField(
+                        readOnly: true,
+                        controller:
+                            TextEditingController(text: c.pdfFileName.value),
+                        validator: Validators.checkFieldEmpty,
+                        suffixIconPath: ImagePath.document,
+                        hint: "Choose File",
+                        onTap: () {
+                          c.pickPdf();
+                        },
+                        textInputAction: TextInputAction.done,
+                        textInputType: TextInputType.text),
+                  ),
+                  SizedBox(height: 25),
+                  CustomElevatedButton(
+                      title: "Apply",
+                      onTap: () {
+                        Get.offAll(() => ApplicationSuccessfulScreen());
+                      })
+                ],
+              )),
         ),
       ),
     );

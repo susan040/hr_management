@@ -19,6 +19,7 @@ class ChangePasswordScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -44,7 +45,7 @@ class ChangePasswordScreen extends StatelessWidget {
               children: [
                 Image.asset(ImagePath.changePassword),
                 SizedBox(height: 30),
-                Text("Enter new password", style: CustomTextStyles.f14W600()),
+                Text("Enter new password", style: CustomTextStyles.f14W500()),
                 SizedBox(height: 10),
                 Obx(() => CustomPasswordField(
                     validator: Validators.checkPasswordField,
@@ -55,10 +56,10 @@ class ChangePasswordScreen extends StatelessWidget {
                     eye: c.newPasswordObscure.value,
                     onEyeClick: c.confirmPasswordOnEyeCLick,
                     controller: c.newPasswordController,
-                    textInputAction: TextInputAction.done)),
+                    textInputAction: TextInputAction.next)),
                 SizedBox(height: 20),
                 Text("Enter confirm password",
-                    style: CustomTextStyles.f14W600()),
+                    style: CustomTextStyles.f14W500()),
                 SizedBox(height: 10),
                 Obx(() => CustomPasswordField(
                     validator: Validators.checkPasswordField,

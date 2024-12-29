@@ -99,12 +99,13 @@ class CustomPasswordField extends StatelessWidget {
                   BorderSide(width: 1, color: border ?? AppColors.errorColor),
               borderRadius: BorderRadius.circular(6)),
           suffixIcon: IconButton(
+            splashColor: AppColors.extraWhite,
             onPressed: onEyeClick,
             icon: (eye)
                 ? SvgPicture.asset(
                     ImagePath.eyeOff,
-                    height: 18,
-                    width: 18,
+                    height: 15,
+                    width: 15,
                     colorFilter: ColorFilter.mode(
                         AppColors.backGroundDark.withOpacity(0.5),
                         BlendMode.srcIn),
@@ -112,7 +113,7 @@ class CustomPasswordField extends StatelessWidget {
                   )
                 : SvgPicture.asset(
                     ImagePath.eye,
-                    height: 13,
+                    height: 11,
                     colorFilter: ColorFilter.mode(
                         AppColors.backGroundDark.withOpacity(0.5),
                         BlendMode.srcIn),
@@ -122,9 +123,9 @@ class CustomPasswordField extends StatelessWidget {
           errorStyle: const TextStyle(fontSize: 10),
           hintText: hint,
           hintStyle:
-              CustomTextStyles.f14W400(color: AppColors.secondaryTextColor),
+              CustomTextStyles.f12W400(color: AppColors.secondaryTextColor),
         ),
-        style: CustomTextStyles.f14W400(),
+        style: CustomTextStyles.f12W400(),
       ),
     );
   }

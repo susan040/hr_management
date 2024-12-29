@@ -48,10 +48,11 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       CustomTextField(
+                          controller: c.emailController,
                           hint: "Enter your email",
                           validator: Validators.checkEmailField,
                           preIconPath: ImagePath.email,
-                          textInputAction: TextInputAction.done,
+                          textInputAction: TextInputAction.next,
                           textInputType: TextInputType.emailAddress),
                       SizedBox(height: 18),
                       Obx(() => CustomPasswordField(

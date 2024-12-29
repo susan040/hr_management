@@ -19,6 +19,7 @@ class ForgotPasswordScreen extends StatelessWidget {
       backgroundColor: AppColors.extraWhite,
       appBar: AppBar(
         backgroundColor: AppColors.extraWhite,
+        elevation: 0,
         leading: InkWell(
             onTap: () {
               Get.back();
@@ -31,7 +32,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           "Forgot password",
-          style: CustomTextStyles.f14W600(),
+          style: CustomTextStyles.f14W600(color: AppColors.backGroundDark),
         ),
       ),
       body: SingleChildScrollView(
@@ -56,7 +57,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
-              Text("Enter Email Address", style: CustomTextStyles.f14W600()),
+              Text("Enter Email Address", style: CustomTextStyles.f14W400()),
               SizedBox(height: 14),
               Form(
                   key: c.keys,

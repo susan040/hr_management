@@ -51,7 +51,7 @@ class RegisterScreen extends StatelessWidget {
                           preIconPath: ImagePath.person,
                           iconHeight: 18,
                           iconWidth: 24,
-                          textInputAction: TextInputAction.done,
+                          textInputAction: TextInputAction.next,
                           textInputType: TextInputType.text),
                       SizedBox(height: 18),
                       CustomTextField(
@@ -61,7 +61,7 @@ class RegisterScreen extends StatelessWidget {
                           preIconPath: ImagePath.email,
                           //iconHeight: 18,
                           // iconWidth: 20,
-                          textInputAction: TextInputAction.done,
+                          textInputAction: TextInputAction.next,
                           textInputType: TextInputType.emailAddress),
                       SizedBox(height: 18),
                       CustomTextField(
@@ -69,7 +69,7 @@ class RegisterScreen extends StatelessWidget {
                           hint: "Enter your address",
                           validator: Validators.checkFieldEmpty,
                           preIconPath: ImagePath.address,
-                          textInputAction: TextInputAction.done,
+                          textInputAction: TextInputAction.next,
                           textInputType: TextInputType.emailAddress),
                       SizedBox(height: 18),
                       CustomTextField(
@@ -79,7 +79,7 @@ class RegisterScreen extends StatelessWidget {
                           preIconPath: ImagePath.phone,
                           iconHeight: 18,
                           iconWidth: 24,
-                          textInputAction: TextInputAction.done,
+                          textInputAction: TextInputAction.next,
                           textInputType: TextInputType.phone),
                       SizedBox(height: 18),
                       Obx(() => CustomPasswordField(
@@ -91,7 +91,7 @@ class RegisterScreen extends StatelessWidget {
                           eye: c.passwordObscure.value,
                           onEyeClick: c.passwordOnEyeCLick,
                           controller: c.passwordController,
-                          textInputAction: TextInputAction.done)),
+                          textInputAction: TextInputAction.next)),
                       SizedBox(height: 18),
                       Obx(() => CustomPasswordField(
                           validator: Validators.checkPasswordField,

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
 
 class ShiftSwappingController extends GetxController {
+  final shiftFormKey = GlobalKey<FormState>();
   var selectedIndex = 0.obs;
   RxString selectShiftType = ''.obs;
   RxString selectShiftWith = ''.obs;
