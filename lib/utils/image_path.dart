@@ -57,4 +57,5 @@ class ImagePath {
   static const String attendanceAppeal = "$baseImagePath/attendance_appeal.png";
   static const String leaveApplicationSuccess =
       "$baseImagePath/leave_success.png";
+  static const String shiftSwap = "$baseImagePath/shift_swap.png";
 }

@@ -86,8 +86,8 @@ class AddLeaveApplicationScreen extends StatelessWidget {
                               color: AppColors.secondaryTextColor),
                         ),
                         decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 18),
+                          contentPadding:
+                              EdgeInsets.only(bottom: 10, left: 14, right: 14),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 color: AppColors.secondaryColor, width: 1),
