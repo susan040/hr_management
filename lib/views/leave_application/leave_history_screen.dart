@@ -35,7 +35,7 @@ class LeaveHistoryScreen extends StatelessWidget {
       ),
       body: Column(children: [
         Padding(
-          padding: const EdgeInsets.only(top: 10, bottom: 8),
+          padding: const EdgeInsets.only(top: 4, bottom: 8),
           child: Center(
             child: Text(
               "Rem.Leave",
@@ -51,7 +51,7 @@ class LeaveHistoryScreen extends StatelessWidget {
         ),
         Padding(
           padding:
-              const EdgeInsets.only(left: 55, right: 55, top: 14, bottom: 20),
+              const EdgeInsets.only(left: 55, right: 55, top: 6, bottom: 14),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
