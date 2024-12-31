@@ -15,6 +15,8 @@ class AppColors {
   static const Color redColor = Color(0xFFC03F42);
   static const Color blue = Color(0xFF407BFF);
   static const Color purple = Color(0xFF8A017A);
+  static const Color lightPurple = Color(0xFFC684BE);
+  static const Color lightDarkBlue = Color(0xFF6861E8);
 
   static const Color yellow = Color(0xFFF38D0E);
 
@@ -41,6 +43,7 @@ class AppColors {
   static const hintTextColor = borderColor;
 
   static const primeYellow = Color(0xFFFFCE50);
+  static const amberYellow = Color(0xFFF38D0E);
 
   static const extraWhite = Color(0xFFFFFFFF);
   static const skyBlue = Color(0xFF36C2CE);

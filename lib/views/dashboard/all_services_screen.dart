@@ -4,6 +4,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
+import 'package:hr_management/views/expenses_management/expenses_history_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 
 class AllServicesScreen extends StatelessWidget {
@@ -108,7 +109,9 @@ class AllServicesScreen extends StatelessWidget {
                   iconPath: ImagePath.expense,
                   title: "Expense",
                   subtitle: "Management",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => ExpensesHistoryScreen());
+                  },
                 ),
                 ServicesWidget(
                   iconContainerColor: AppColors.lightblue,
