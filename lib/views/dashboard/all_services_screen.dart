@@ -3,8 +3,12 @@ import 'package:get/get.dart';
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/attendence_appeal/appeal_history_screen.dart';
 import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
 import 'package:hr_management/views/expenses_management/expenses_history_screen.dart';
+import 'package:hr_management/views/grievance/add_grievance_screen.dart';
+import 'package:hr_management/views/leave_application/leave_history_screen.dart';
+import 'package:hr_management/views/shift_swapping/your_shift_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 
 class AllServicesScreen extends StatelessWidget {
@@ -53,14 +57,18 @@ class AllServicesScreen extends StatelessWidget {
                   iconPath: ImagePath.appeal,
                   title: "Attendance",
                   subtitle: "Appeal",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => AppealHistoryScreen());
+                  },
                 ),
                 ServicesWidget(
                   iconContainerColor: AppColors.yellow,
                   iconPath: ImagePath.leaveApplication,
                   title: "Leave",
                   subtitle: "Application",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => LeaveHistoryScreen());
+                  },
                 ),
               ],
             ),
@@ -86,14 +94,18 @@ class AllServicesScreen extends StatelessWidget {
                   iconPath: ImagePath.grievance,
                   title: "Grievance",
                   subtitle: "Redressal",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => AddGrievanceScreen());
+                  },
                 ),
                 ServicesWidget(
                   iconContainerColor: AppColors.darkRed,
                   iconPath: ImagePath.shift,
                   title: "Shift",
                   subtitle: "Swapping",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => YourShiftScreen());
+                  },
                 ),
               ],
             ),

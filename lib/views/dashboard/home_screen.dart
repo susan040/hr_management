@@ -10,6 +10,7 @@ import 'package:hr_management/views/attendence_appeal/appeal_history_screen.dart
 import 'package:hr_management/views/attendence_management/attendance_history_screen.dart';
 import 'package:hr_management/views/dashboard/all_services_screen.dart';
 import 'package:hr_management/views/dashboard/notification_screen.dart';
+import 'package:hr_management/views/grievance/add_grievance_screen.dart';
 import 'package:hr_management/views/leave_application/leave_history_screen.dart';
 import 'package:hr_management/views/shift_swapping/your_shift_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
@@ -290,7 +291,9 @@ class HomeScreen extends StatelessWidget {
                       iconPath: ImagePath.grievance,
                       title: "Grievance",
                       subtitle: "Redressal",
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => AddGrievanceScreen());
+                      },
                     ),
                     ServicesWidget(
                       iconContainerColor: AppColors.darkRed,
