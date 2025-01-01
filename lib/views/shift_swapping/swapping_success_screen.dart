@@ -22,22 +22,22 @@ class SwappingSuccessScreen extends StatelessWidget {
               width: 230,
             ),
           ),
-          SizedBox(height: 25),
+          SizedBox(height: 30),
           Text(
             "Thank you",
             style: CustomTextStyles.f24W600(),
           ),
-          SizedBox(height: 8),
+          SizedBox(height: 12),
           Padding(
             padding: const EdgeInsets.only(left: 70, right: 70),
             child: Text(
-              "YOUR request for SHIFT SWAPPING has submitted SUCCESSFULLY!!",
+              "YOUR REQUEST FOR SHIFT SWAPPING HAS SUBMITTED SUCCESSFULLY!!",
               style:
                   CustomTextStyles.f12W400(color: AppColors.secondaryTextColor),
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 4),
+          SizedBox(height: 8),
           InkWell(
             onTap: () {
               Get.to(() => DashScreen());
