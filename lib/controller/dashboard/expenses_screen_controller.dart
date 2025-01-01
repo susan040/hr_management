@@ -48,22 +48,29 @@ class ExpensesScreenController extends GetxController {
   void loadChartData() {
     chartSections.value = [
       PieChartSectionData(
-        value: 40,
-        title: '40%',
-        color: Colors.red,
-        radius: 60,
+        showTitle: false,
+        color: AppColors.rejected,
+        radius: 30,
       ),
       PieChartSectionData(
-        value: 30,
-        title: '30%',
-        color: Colors.blue,
-        radius: 60,
+        color: AppColors.blue,
+        radius: 30,
+        showTitle: false,
       ),
       PieChartSectionData(
-        value: 30,
-        title: '30%',
-        color: Colors.purple,
-        radius: 60,
+        color: AppColors.purple,
+        radius: 30,
+        showTitle: false,
+      ),
+      PieChartSectionData(
+        color: AppColors.amberYellow,
+        radius: 30,
+        showTitle: false,
+      ),
+      PieChartSectionData(
+        color: AppColors.green,
+        radius: 30,
+        showTitle: false,
       ),
     ];
   }

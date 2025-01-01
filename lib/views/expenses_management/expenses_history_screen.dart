@@ -242,7 +242,9 @@ class ExpensesHistoryScreen extends StatelessWidget {
                           child: PieChart(
                             PieChartData(
                               sections: c.chartSections,
-                              centerSpaceRadius: 60,
+                              centerSpaceRadius: 80,
+                              sectionsSpace: 0,
+                              
                               centerSpaceColor: Colors.white,
                               borderData: FlBorderData(show: true),
                               pieTouchData: PieTouchData(enabled: true),
