@@ -6,6 +6,7 @@ import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
 import 'package:hr_management/utils/validatior.dart';
+import 'package:hr_management/views/expenses_management/expenses_history_screen.dart';
 import 'package:hr_management/widgets/custom/custom_textfield.dart';
 import 'package:hr_management/widgets/custom/elevated_button.dart';
 import 'package:image_picker/image_picker.dart';
@@ -125,14 +126,14 @@ class CategoriesWidget extends StatelessWidget {
                   key: c.categoryFormKey,
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 18, right: 18, top: 30, bottom: 15),
+                        left: 18, right: 18, top: 20, bottom: 12),
                     child: Column(
                       children: [
                         Text(
                           "Enter Expenses Details",
                           style: CustomTextStyles.f14W600(),
                         ),
-                        SizedBox(height: 18),
+                        SizedBox(height: 14),
                         CustomTextField(
                             hint: "Enter Amount",
                             validator: Validators.checkFieldEmpty,
@@ -161,8 +162,8 @@ class CategoriesWidget extends StatelessWidget {
                                   ? Image.file(
                                       c.image.value!,
                                       fit: BoxFit.cover,
-                                      height: 120,
-                                      width: 120,
+                                      height: 100,
+                                      width: 100,
                                     )
                                   : CachedNetworkImage(
                                       placeholder: (context, url) => SizedBox(
@@ -170,32 +171,40 @@ class CategoriesWidget extends StatelessWidget {
                                           width: 20,
                                           child: CircularProgressIndicator()),
                                       fit: BoxFit.fill,
-                                      height: 120,
-                                      width: 120,
+                                      height: 100,
+                                      width: 100,
                                       imageUrl: ImagePath.noImage,
                                       errorWidget: (context, url, error) =>
                                           Image.asset(
                                         ImagePath.noImage,
                                         fit: BoxFit.fill,
-                                        height: 120,
-                                        width: 120,
+                                        height: 100,
+                                        width: 100,
                                       ),
                                     ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 14),
+                        SizedBox(height: 18),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             SizedBox(
-                                width: Get.width / 1.3,
+                                width: Get.width / 1.29,
                                 child: CustomElevatedButton(
-                                    title: "Save", onTap: () {})),
+                                    title: "Save",
+                                    onTap: () {
+                                      Get.offUntil(
+                                        MaterialPageRoute(
+                                            builder: (_) =>
+                                                ExpensesHistoryScreen()),
+                                        (route) => route.isFirst,
+                                      );
+                                    })),
                             PopupMenuButton(
                               icon: const Icon(
                                 Icons.camera_alt,
-                                size: 40,
+                                size: 38,
                               ),
                               itemBuilder: (ctx) => [
                                 PopupMenuItem<int>(
@@ -230,7 +239,7 @@ class CategoriesWidget extends StatelessWidget {
                 ));
       },
       child: Container(
-        padding: EdgeInsets.only(left: 14, top: 4, bottom: 4),
+        padding: EdgeInsets.only(left: 10, top: 4, bottom: 4),
         height: 65,
         width: Get.width / 2.3,
         decoration: BoxDecoration(
@@ -253,7 +262,7 @@ class CategoriesWidget extends StatelessWidget {
                 width: 28,
               )),
             ),
-            SizedBox(width: 15),
+            SizedBox(width: 10),
             Text(
               name,
               style: CustomTextStyles.f14W500(),

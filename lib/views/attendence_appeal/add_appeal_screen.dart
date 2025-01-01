@@ -4,6 +4,7 @@ import 'package:hr_management/controller/dashboard/appeal_history_controller.dar
 import 'package:hr_management/utils/colors.dart';
 import 'package:hr_management/utils/custom_text_style.dart';
 import 'package:hr_management/utils/image_path.dart';
+import 'package:hr_management/views/attendence_appeal/appeal_history_screen.dart';
 import 'package:hr_management/widgets/custom/custom_textfield.dart';
 import 'package:hr_management/widgets/custom/elevated_button.dart';
 import 'package:intl/intl.dart';
@@ -186,7 +187,14 @@ class AddAppealScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 16, right: 16, bottom: 20),
-        child: CustomElevatedButton(title: "Submit", onTap: () {}),
+        child: CustomElevatedButton(
+            title: "Submit",
+            onTap: () {
+              Get.offUntil(
+                MaterialPageRoute(builder: (_) => AppealHistoryScreen()),
+                (route) => route.isFirst,
+              );
+            }),
       ),
     );
   }
