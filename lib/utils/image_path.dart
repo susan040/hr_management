@@ -71,4 +71,5 @@ class ImagePath {
   static const String travelIcon = "$baseImagePath/travel.png";
   static const String noImage = "$baseImagePath/no_image.png";
   static const String grievanceSuccess = "$baseImagePath/grievance_success.png";
+  static const String raiseIssue = "$baseImagePath/raise_issue.png";
 }

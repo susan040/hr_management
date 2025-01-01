@@ -8,6 +8,7 @@ import 'package:hr_management/views/attendence_management/attendance_history_scr
 import 'package:hr_management/views/expenses_management/expenses_history_screen.dart';
 import 'package:hr_management/views/grievance/add_grievance_screen.dart';
 import 'package:hr_management/views/leave_application/leave_history_screen.dart';
+import 'package:hr_management/views/pay_slip/pay_slip_screen%20.dart';
 import 'package:hr_management/views/shift_swapping/your_shift_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 
@@ -87,7 +88,9 @@ class AllServicesScreen extends StatelessWidget {
                   iconPath: ImagePath.paySlip,
                   title: "Pay Slip",
                   subtitle: "Management",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => PaySlipScreen());
+                  },
                 ),
                 ServicesWidget(
                   iconContainerColor: AppColors.darkblue,
