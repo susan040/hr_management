@@ -37,7 +37,7 @@ class ApplicationSuccessfulScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(height: 4),
+          SizedBox(height: 8),
           InkWell(
             onTap: () {
               Get.to(() => DashScreen());

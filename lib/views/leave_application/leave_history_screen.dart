@@ -130,7 +130,7 @@ class LeaveHistoryScreen extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.only(left: 10, right: 10),
           height: 38,
-          width: 130,
+          width: 120,
           decoration: BoxDecoration(
               color: AppColors.primaryColor,
               borderRadius: BorderRadius.circular(5)),
@@ -151,7 +151,7 @@ class LeaveHistoryScreen extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 "App Leave",
-                style: CustomTextStyles.f14W400(color: AppColors.extraWhite),
+                style: CustomTextStyles.f12W600(color: AppColors.extraWhite),
               )
             ],
           ),
