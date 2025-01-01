@@ -22,32 +22,33 @@ class GrievanceSuccessScreen extends StatelessWidget {
               child: Image.asset(
                 ImagePath.grievanceSuccess,
                 height: 213,
-                width: 300,
+                width: 280,
               ),
             ),
+            SizedBox(height: 30),
             Text(
               "THANK YOU",
-              style: CustomTextStyles.f32W600(),
+              style: CustomTextStyles.f24W600(),
             ),
-            SizedBox(height: 9),
+            SizedBox(height: 12),
             Padding(
               padding: const EdgeInsets.only(left: 14, right: 14),
               child: Text(
                 "YOUR GRIEVANCE SUBMITTED \n"
                 "SUCCESSFULLY!!!",
-                style: CustomTextStyles.f14W400(
+                style: CustomTextStyles.f12W400(
                     color: AppColors.secondaryTextColor),
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 4),
+            SizedBox(height: 8),
             InkWell(
               onTap: () {
                 Get.to(() => DashScreen());
               },
               child: Text(
                 "GOT IT",
-                style: CustomTextStyles.f18W600(color: AppColors.redColor),
+                style: CustomTextStyles.f16W600(color: AppColors.redColor),
               ),
             ),
             SizedBox(height: 60),
