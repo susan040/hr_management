@@ -46,6 +46,7 @@ class ImagePath {
   static const String money = "$baseIconPath/money.svg";
   static const String bar = "$baseIconPath/bar.svg";
   static const String list = "$baseIconPath/list.svg";
+  static const String location = "$baseIconPath/location.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
@@ -72,4 +73,5 @@ class ImagePath {
   static const String noImage = "$baseImagePath/no_image.png";
   static const String grievanceSuccess = "$baseImagePath/grievance_success.png";
   static const String raiseIssue = "$baseImagePath/raise_issue.png";
+  static const String travelVisit = "$baseImagePath/travel_visit.png";
 }

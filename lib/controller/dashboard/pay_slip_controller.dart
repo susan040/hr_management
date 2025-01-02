@@ -145,37 +145,24 @@ class PaySlipController extends GetxController {
 
   Future<void> saveAndOpenPDF() async {
     try {
-      // Set loading to true
       isLoading.value = true;
-
-      // Show loading dialog
       Get.dialog(
         Center(child: CircularProgressIndicator()),
         barrierDismissible: false,
       );
-
-      // Generate PDF
       await generatePDF();
-
-      // Get directory to save
       final directory = await getApplicationDocumentsDirectory();
       final filePath = "${directory.path}/HR_Management_payslip.pdf";
 
-      // Save PDF file
       final file = File(filePath);
       await file.writeAsBytes(await pdf.save());
 
-      // Open the file (optional)
       await OpenFile.open(filePath);
-
-      // Dismiss loading dialog
       Get.back();
     } catch (e) {
       debugPrint("Error: $e");
-      // Show an error message if needed
-      Get.snackbar("Error", "Failed to generate PDF. Please try again.");
+      //Get.snackbar("Error", "Failed to generate PDF. Please try again.");
     } finally {
-      // Set loading to false
       isLoading.value = false;
     }
   }

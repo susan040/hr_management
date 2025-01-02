@@ -10,6 +10,7 @@ import 'package:hr_management/views/grievance/add_grievance_screen.dart';
 import 'package:hr_management/views/leave_application/leave_history_screen.dart';
 import 'package:hr_management/views/pay_slip/pay_slip_screen%20.dart';
 import 'package:hr_management/views/shift_swapping/your_shift_screen.dart';
+import 'package:hr_management/views/travel_visiting/travel_visit_history_screen.dart';
 import 'package:hr_management/widgets/services_widgets.dart';
 
 class AllServicesScreen extends StatelessWidget {
@@ -133,7 +134,9 @@ class AllServicesScreen extends StatelessWidget {
                   iconPath: ImagePath.travel,
                   title: "Travel",
                   subtitle: "visiting",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => TravelVisitHistoryScreen());
+                  },
                 ),
                 ServicesWidget(
                   iconContainerColor: AppColors.green,
