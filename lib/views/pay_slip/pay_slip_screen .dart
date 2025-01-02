@@ -154,7 +154,9 @@ class PaySlipScreen extends StatelessWidget {
                   height: 28,
                   width: 100,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      c.isLoading.value ? null : c.saveAndOpenPDF();
+                    },
                     style: ElevatedButton.styleFrom(
                       shadowColor: AppColors.extraWhite,
                       backgroundColor: AppColors.rejected,
