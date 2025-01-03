@@ -47,6 +47,8 @@ class ImagePath {
   static const String bar = "$baseIconPath/bar.svg";
   static const String list = "$baseIconPath/list.svg";
   static const String location = "$baseIconPath/location.svg";
+  static const String pdf = "$baseIconPath/pdf.svg";
+  static const String pdfDownload = "$baseIconPath/pdf_download.svg";
 
   static const String logo = "$baseImagePath/logo.png";
   static const String privacyPolicy = "$baseImagePath/privacy_policy.png";
@@ -74,4 +76,6 @@ class ImagePath {
   static const String grievanceSuccess = "$baseImagePath/grievance_success.png";
   static const String raiseIssue = "$baseImagePath/raise_issue.png";
   static const String travelVisit = "$baseImagePath/travel_visit.png";
+  static const String paymentSuccess = "$baseImagePath/payment_success.png";
+  static const String networkError = "$baseImagePath/network_error.png";
 }
